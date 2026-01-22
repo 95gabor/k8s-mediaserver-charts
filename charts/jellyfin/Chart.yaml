@@ -2,8 +2,8 @@ apiVersion: v2
 name: jellyfin
 description: A Helm chart for Jellyfin
 type: application
-version: 0.1.10
-appVersion: 10.11.5
+version: 0.1.11
+appVersion: 10.11.6
 icon: https://raw.githubusercontent.com/jellyfin/jellyfin-ux/master/branding/SVG/icon-transparent.svg
 home: https://jellyfin.org/
 sources:
