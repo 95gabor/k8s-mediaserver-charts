@@ -2,6 +2,29 @@ apiVersion: v1
 entries:
   jackett:
   - apiVersion: v2
+    appVersion: 0.24.955
+    created: "2026-01-28T09:12:15.763100534Z"
+    description: A Helm chart for Jackett
+    digest: 290ac2a98d906a2bc5e2d3a9732a980f764afd0d8067b27e6eaab9ed3e065b63
+    home: https://github.com/Jackett/Jackett
+    icon: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/jackett-logo.png
+    keywords:
+    - jackett
+    - torrent
+    - tracker
+    - indexer
+    - media
+    maintainers:
+    - name: 95gabor
+    name: jackett
+    sources:
+    - https://github.com/Jackett/Jackett
+    - https://github.com/95gabor/k8s-mediaserver-charts
+    type: application
+    urls:
+    - https://github.com/95gabor/k8s-mediaserver-charts/releases/download/jackett-0.1.22/jackett-0.1.22.tgz
+    version: 0.1.22
+  - apiVersion: v2
     appVersion: 0.24.946
     created: "2026-01-28T05:17:59.71618552Z"
     description: A Helm chart for Jackett
@@ -3265,6 +3288,30 @@ entries:
     version: 0.1.1
   seerr:
   - apiVersion: v2
+    appVersion: sha-5bd3104
+    created: "2026-01-28T09:12:15.998127703Z"
+    description: A Helm chart for Seerr
+    digest: 963b140f57a5c861a2d83e877853b71deae29ca97edc4e1ab5bd293aca1dbe38
+    home: https://github.com/seerr-team/seerr
+    icon: https://raw.githubusercontent.com/seerr-team/seerr/main/public/logo_full.svg
+    keywords:
+    - seerr
+    - media
+    - request
+    - discovery
+    - plex
+    - jellyfin
+    maintainers:
+    - name: 95gabor
+    name: seerr
+    sources:
+    - https://github.com/seerr-team/seerr
+    - https://github.com/95gabor/k8s-mediaserver-charts
+    type: application
+    urls:
+    - https://github.com/95gabor/k8s-mediaserver-charts/releases/download/seerr-0.1.22/seerr-0.1.22.tgz
+    version: 0.1.22
+  - apiVersion: v2
     appVersion: sha-0f7d296
     created: "2026-01-28T05:17:59.843575894Z"
     description: A Helm chart for Seerr
@@ -3963,6 +4010,29 @@ entries:
     version: 0.1.1
   transmission:
   - apiVersion: v2
+    appVersion: 4.1.0
+    created: "2026-01-28T09:12:16.228211449Z"
+    description: A Helm chart for Transmission
+    digest: a7ccaa4c036dc92fe300143b45269f14b7c721d19b5a549db5f9217b2a43700f
+    home: https://transmissionbt.com/
+    icon: https://simpleicons.org/icons/transmission.svg
+    keywords:
+    - transmission
+    - torrent
+    - bittorrent
+    - download
+    - media
+    maintainers:
+    - name: 95gabor
+    name: transmission
+    sources:
+    - https://github.com/transmission/transmission
+    - https://github.com/95gabor/k8s-mediaserver-charts
+    type: application
+    urls:
+    - https://github.com/95gabor/k8s-mediaserver-charts/releases/download/transmission-0.1.10/transmission-0.1.10.tgz
+    version: 0.1.10
+  - apiVersion: v2
     appVersion: 4.0.6
     created: "2025-11-29T12:37:27.862550578Z"
     description: A Helm chart for Transmission
@@ -4146,4 +4216,4 @@ entries:
     urls:
     - https://github.com/95gabor/k8s-mediaserver-charts/releases/download/transmission-0.1.1.tgz
     version: 0.1.1
-generated: "2026-01-28T05:23:32.269706414Z"
+generated: "2026-01-28T09:12:16.228594185Z"
