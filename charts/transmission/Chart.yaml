@@ -2,18 +2,18 @@ apiVersion: v2
 name: transmission
 description: A Helm chart for Transmission
 type: application
-version: 0.1.9
-appVersion: "4.0.6"
+version: 0.1.10
+appVersion: 4.1.0
 icon: https://simpleicons.org/icons/transmission.svg
 home: https://transmissionbt.com/
 sources:
-  - https://github.com/transmission/transmission
-  - https://github.com/95gabor/k8s-mediaserver-charts
+- https://github.com/transmission/transmission
+- https://github.com/95gabor/k8s-mediaserver-charts
 keywords:
-  - transmission
-  - torrent
-  - bittorrent
-  - download
-  - media
+- transmission
+- torrent
+- bittorrent
+- download
+- media
 maintainers:
-  - name: 95gabor
+- name: 95gabor
