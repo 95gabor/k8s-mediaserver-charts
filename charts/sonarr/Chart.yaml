@@ -2,24 +2,19 @@ apiVersion: v2
 name: sonarr
 description: A Helm chart for Sonarr
 type: application
-version: 0.1.10
-# WARNING: linuxserver/sonarr uses BASE VERSION tags (e.g., "4.0.16"), NOT full build numbers!
-# Docker image tags are in format: docker.io/linuxserver/sonarr:<base-version>
-# Example: Release 4.0.16.2944 uses tag "4.0.16" (not "4.0.16.2944")
-# Full build numbers like "4.0.16.2944-ls299" exist but are linuxserver-specific builds
-# Previous format was: "4.0.16" (for reference)
-appVersion: "4.0.16"
+version: 0.1.11
+appVersion: 4.0.17
 icon: https://raw.githubusercontent.com/Sonarr/Sonarr/develop/Logo/256.png
 home: https://sonarr.tv/
 sources:
-  - https://github.com/Sonarr/Sonarr
-  - https://github.com/95gabor/k8s-mediaserver-charts
+- https://github.com/Sonarr/Sonarr
+- https://github.com/95gabor/k8s-mediaserver-charts
 keywords:
-  - sonarr
-  - tv
-  - series
-  - tracker
-  - media
-  - automation
+- sonarr
+- tv
+- series
+- tracker
+- media
+- automation
 maintainers:
-  - name: 95gabor
+- name: 95gabor
