@@ -2,23 +2,18 @@ apiVersion: v2
 name: radarr
 description: A Helm chart for Radarr
 type: application
-version: 0.1.10
-# WARNING: linuxserver/radarr uses BASE VERSION tags (e.g., "6.0.4"), NOT full build numbers!
-# Docker image tags are in format: docker.io/linuxserver/radarr:<base-version>
-# Example: Release 6.0.4.10291 uses tag "6.0.4" (not "6.0.4.10291")
-# Full build numbers like "6.0.4.10291-ls288" exist but are linuxserver-specific builds
-# Previous format was: "6.0.4" (for reference)
-appVersion: "6.0.4"
+version: 0.1.11
+appVersion: 6.1.1
 icon: https://raw.githubusercontent.com/Radarr/Radarr/develop/Logo/256.png
 home: https://radarr.video/
 sources:
-  - https://github.com/Radarr/Radarr
-  - https://github.com/95gabor/k8s-mediaserver-charts
+- https://github.com/Radarr/Radarr
+- https://github.com/95gabor/k8s-mediaserver-charts
 keywords:
-  - radarr
-  - movies
-  - tracker
-  - media
-  - automation
+- radarr
+- movies
+- tracker
+- media
+- automation
 maintainers:
-  - name: 95gabor
+- name: 95gabor
