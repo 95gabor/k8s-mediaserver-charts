@@ -1,6 +1,6 @@
 # seerr
 
-![Version: 0.1.28](https://img.shields.io/badge/Version-0.1.28-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: sha-5373da4](https://img.shields.io/badge/AppVersion-sha-5373da4-informational?style=flat-square)
+![Version: 0.1.29](https://img.shields.io/badge/Version-0.1.29-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: sha-4434c45](https://img.shields.io/badge/AppVersion-sha-4434c45-informational?style=flat-square)
 
 A Helm chart for Seerr
 
