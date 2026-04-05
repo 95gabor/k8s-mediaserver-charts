@@ -2,8 +2,8 @@ apiVersion: v2
 name: jackett
 description: A Helm chart for Jackett
 type: application
-version: 0.1.29
-appVersion: 0.24.1519
+version: 0.1.30
+appVersion: 0.24.1539
 icon: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/jackett-logo.png
 home: https://github.com/Jackett/Jackett
 sources:

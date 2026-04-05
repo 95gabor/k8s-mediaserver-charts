@@ -2,23 +2,18 @@ apiVersion: v2
 name: prowlarr
 description: A Helm chart for Prowlarr
 type: application
-version: 0.1.10
-# WARNING: linuxserver/prowlarr uses BASE VERSION tags (e.g., "2.3.0"), NOT full build numbers!
-# Docker image tags are in format: docker.io/linuxserver/prowlarr:<base-version>
-# Example: Release 2.3.0.5236 uses tag "2.3.0" (not "2.3.0.5236")
-# Full build numbers like "2.3.0.5236-lsXXX" exist but are linuxserver-specific builds
-# Previous format was: "2.3.0.5236" (for reference)
-appVersion: "2.3.0"
+version: 0.1.11
+appVersion: 2.3.5
 icon: https://raw.githubusercontent.com/Prowlarr/Prowlarr/develop/Logo/256.png
 home: https://github.com/Prowlarr/Prowlarr
 sources:
-  - https://github.com/Prowlarr/Prowlarr
-  - https://github.com/95gabor/k8s-mediaserver-charts
+- https://github.com/Prowlarr/Prowlarr
+- https://github.com/95gabor/k8s-mediaserver-charts
 keywords:
-  - prowlarr
-  - indexer
-  - tracker
-  - pvr
-  - media
+- prowlarr
+- indexer
+- tracker
+- pvr
+- media
 maintainers:
-  - name: 95gabor
+- name: 95gabor
