@@ -1,6 +1,6 @@
 # jellyfin
 
-![Version: 0.1.12](https://img.shields.io/badge/Version-0.1.12-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 10.11.7](https://img.shields.io/badge/AppVersion-10.11.7-informational?style=flat-square)
+![Version: 0.1.13](https://img.shields.io/badge/Version-0.1.13-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 10.11.8](https://img.shields.io/badge/AppVersion-10.11.8-informational?style=flat-square)
 
 A Helm chart for Jellyfin
 
