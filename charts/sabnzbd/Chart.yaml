@@ -2,18 +2,18 @@ apiVersion: v2
 name: sabnzbd
 description: A Helm chart for SABnzbd
 type: application
-version: 0.1.8
-appVersion: "4.5.5"
+version: 0.1.9
+appVersion: 5.0.0
 icon: https://media.sys.truenas.net/apps/sabnzbd/icons/icon.svg
 home: https://sabnzbd.org/
 sources:
-  - https://github.com/sabnzbd/sabnzbd
-  - https://github.com/95gabor/k8s-mediaserver-charts
+- https://github.com/sabnzbd/sabnzbd
+- https://github.com/95gabor/k8s-mediaserver-charts
 keywords:
-  - sabnzbd
-  - usenet
-  - nzb
-  - download
-  - media
+- sabnzbd
+- usenet
+- nzb
+- download
+- media
 maintainers:
-  - name: 95gabor
+- name: 95gabor
