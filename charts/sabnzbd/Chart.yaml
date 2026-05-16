@@ -2,8 +2,8 @@ apiVersion: v2
 name: sabnzbd
 description: A Helm chart for SABnzbd
 type: application
-version: 0.1.10
-appVersion: 5.0.1
+version: 0.1.11
+appVersion: 5.0.3
 icon: https://media.sys.truenas.net/apps/sabnzbd/icons/icon.svg
 home: https://sabnzbd.org/
 sources:
