@@ -53,7 +53,25 @@ jobs:
         run: |
           mv charts/k8s-mediaserver /tmp/k8s-mediaserver || echo "Umbrella chart not found, continuing..."
 
-      - name: Run chart-releaser for service charts
+      - name: Refresh gh-pages reference
+        run: |
+          git fetch origin gh-pages:gh-pages --force || echo "gh-pages branch not available yet, continuing..."
+
+      - name: Run chart-releaser for service charts (attempt 1)
+        id: service_release_attempt_1
+        continue-on-error: true
+        uses: helm/chart-releaser-action@v1.5.0
+        env:
+          CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+          CR_GENERATE_RELEASE_NOTES: true
+          CR_SKIP_EXISTING: "true"
+
+      - name: Refresh gh-pages reference before retry
+        if: steps.service_release_attempt_1.outcome == 'failure'
+        run: git fetch origin gh-pages:gh-pages --force
+
+      - name: Run chart-releaser for service charts (attempt 2)
+        if: steps.service_release_attempt_1.outcome == 'failure'
         uses: helm/chart-releaser-action@v1.5.0
         env:
           CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
@@ -114,7 +132,24 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Run chart-releaser for umbrella chart
+      - name: Refresh gh-pages reference
+        run: git fetch origin gh-pages:gh-pages --force
+
+      - name: Run chart-releaser for umbrella chart (attempt 1)
+        id: umbrella_release_attempt_1
+        continue-on-error: true
+        uses: helm/chart-releaser-action@v1.5.0
+        env:
+          CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+          CR_GENERATE_RELEASE_NOTES: true
+          CR_SKIP_EXISTING: "true"
+
+      - name: Refresh gh-pages reference before retry
+        if: steps.umbrella_release_attempt_1.outcome == 'failure'
+        run: git fetch origin gh-pages:gh-pages --force
+
+      - name: Run chart-releaser for umbrella chart (attempt 2)
+        if: steps.umbrella_release_attempt_1.outcome == 'failure'
         uses: helm/chart-releaser-action@v1.5.0
         env:
           CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
