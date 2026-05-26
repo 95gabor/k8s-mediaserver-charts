@@ -2,6 +2,29 @@ apiVersion: v1
 entries:
   jackett:
   - apiVersion: v2
+    appVersion: 0.24.1954
+    created: "2026-05-26T09:33:11.744395746Z"
+    description: A Helm chart for Jackett
+    digest: 88167e33dfa4e11782d33ba7ef36a2a41fb959bc3eda5963c06355a1f3385b08
+    home: https://github.com/Jackett/Jackett
+    icon: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/jackett-logo.png
+    keywords:
+    - jackett
+    - torrent
+    - tracker
+    - indexer
+    - media
+    maintainers:
+    - name: 95gabor
+    name: jackett
+    sources:
+    - https://github.com/Jackett/Jackett
+    - https://github.com/95gabor/k8s-mediaserver-charts
+    type: application
+    urls:
+    - https://github.com/95gabor/k8s-mediaserver-charts/releases/download/jackett-0.1.36/jackett-0.1.36.tgz
+    version: 0.1.36
+  - apiVersion: v2
     appVersion: 0.24.1909
     created: "2026-05-21T09:25:05.539800654Z"
     description: A Helm chart for Jackett
@@ -784,6 +807,29 @@ entries:
     - https://github.com/95gabor/k8s-mediaserver-charts/releases/download/jackett-0.1.1.tgz
     version: 0.1.1
   jellyfin:
+  - apiVersion: v2
+    appVersion: 10.11.10
+    created: "2026-05-26T09:33:11.960556067Z"
+    description: A Helm chart for Jellyfin
+    digest: 4c2c8773857cc3a0133db3edbf3fd389cccb7c53342a877da889931542176117
+    home: https://jellyfin.org/
+    icon: https://raw.githubusercontent.com/jellyfin/jellyfin-ux/master/branding/SVG/icon-transparent.svg
+    keywords:
+    - jellyfin
+    - media
+    - server
+    - streaming
+    - open-source
+    maintainers:
+    - name: 95gabor
+    name: jellyfin
+    sources:
+    - https://github.com/jellyfin/jellyfin
+    - https://github.com/95gabor/k8s-mediaserver-charts
+    type: application
+    urls:
+    - https://github.com/95gabor/k8s-mediaserver-charts/releases/download/jellyfin-0.1.15/jellyfin-0.1.15.tgz
+    version: 0.1.15
   - apiVersion: v2
     appVersion: 10.11.9
     created: "2026-05-21T09:25:05.865784385Z"
@@ -4642,6 +4688,30 @@ entries:
     version: 0.1.1
   seerr:
   - apiVersion: v2
+    appVersion: sha-ff88d52
+    created: "2026-05-26T09:33:12.173882008Z"
+    description: A Helm chart for Seerr
+    digest: 1006974e3570ee13c569080ff7ddb3b87c914417ce22eac248a8a46764b3c2af
+    home: https://github.com/seerr-team/seerr
+    icon: https://raw.githubusercontent.com/seerr-team/seerr/main/public/logo_full.svg
+    keywords:
+    - seerr
+    - media
+    - request
+    - discovery
+    - plex
+    - jellyfin
+    maintainers:
+    - name: 95gabor
+    name: seerr
+    sources:
+    - https://github.com/seerr-team/seerr
+    - https://github.com/95gabor/k8s-mediaserver-charts
+    type: application
+    urls:
+    - https://github.com/95gabor/k8s-mediaserver-charts/releases/download/seerr-0.1.36/seerr-0.1.36.tgz
+    version: 0.1.36
+  - apiVersion: v2
     appVersion: sha-4fa2c71
     created: "2026-05-21T09:25:06.078331823Z"
     description: A Helm chart for Seerr
@@ -5929,4 +5999,4 @@ entries:
     urls:
     - https://github.com/95gabor/k8s-mediaserver-charts/releases/download/transmission-0.1.1.tgz
     version: 0.1.1
-generated: "2026-05-21T15:02:24.370954753Z"
+generated: "2026-05-26T09:33:12.174627318Z"
