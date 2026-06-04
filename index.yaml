@@ -2,6 +2,29 @@ apiVersion: v1
 entries:
   jackett:
   - apiVersion: v2
+    appVersion: 0.24.2014
+    created: "2026-06-04T15:01:49.66900521Z"
+    description: A Helm chart for Jackett
+    digest: 57206abf033f4376b15a9dda6808d2519cdbd340c09e91605e91f2e577a475e1
+    home: https://github.com/Jackett/Jackett
+    icon: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/jackett-logo.png
+    keywords:
+    - jackett
+    - torrent
+    - tracker
+    - indexer
+    - media
+    maintainers:
+    - name: 95gabor
+    name: jackett
+    sources:
+    - https://github.com/Jackett/Jackett
+    - https://github.com/95gabor/k8s-mediaserver-charts
+    type: application
+    urls:
+    - https://github.com/95gabor/k8s-mediaserver-charts/releases/download/jackett-0.1.38/jackett-0.1.38.tgz
+    version: 0.1.38
+  - apiVersion: v2
     appVersion: 0.24.2007
     created: "2026-06-03T10:39:37.913317236Z"
     description: A Helm chart for Jackett
@@ -4013,6 +4036,29 @@ entries:
     version: 0.10.2
   plex:
   - apiVersion: v2
+    appVersion: 1.43.2
+    created: "2026-06-04T15:01:49.840046475Z"
+    description: A Helm chart for Plex Media Server
+    digest: f4a92e734f2b124738c4a1c40f3ffd5cc06acf88a591904e5b0c0905ed9ba77f
+    home: https://www.plex.tv/
+    icon: https://simpleicons.org/icons/plex.svg
+    keywords:
+    - plex
+    - media
+    - server
+    - streaming
+    - video
+    maintainers:
+    - name: 95gabor
+    name: plex
+    sources:
+    - https://github.com/plexinc/pms-docker
+    - https://github.com/95gabor/k8s-mediaserver-charts
+    type: application
+    urls:
+    - https://github.com/95gabor/k8s-mediaserver-charts/releases/download/plex-0.1.9/plex-0.1.9.tgz
+    version: 0.1.9
+  - apiVersion: v2
     appVersion: 1.42.2
     created: "2025-11-29T12:37:26.987683384Z"
     description: A Helm chart for Plex Media Server
@@ -4844,6 +4890,30 @@ entries:
     - https://github.com/95gabor/k8s-mediaserver-charts/releases/download/sabnzbd-0.1.1.tgz
     version: 0.1.1
   seerr:
+  - apiVersion: v2
+    appVersion: sha-2a249a8
+    created: "2026-06-04T15:01:50.036918623Z"
+    description: A Helm chart for Seerr
+    digest: 5ea39c604f6fd4fbb88d71f50bdf4a42c87c7054e4ebf0e4f888359b90d0fb96
+    home: https://github.com/seerr-team/seerr
+    icon: https://raw.githubusercontent.com/seerr-team/seerr/main/public/logo_full.svg
+    keywords:
+    - seerr
+    - media
+    - request
+    - discovery
+    - plex
+    - jellyfin
+    maintainers:
+    - name: 95gabor
+    name: seerr
+    sources:
+    - https://github.com/seerr-team/seerr
+    - https://github.com/95gabor/k8s-mediaserver-charts
+    type: application
+    urls:
+    - https://github.com/95gabor/k8s-mediaserver-charts/releases/download/seerr-0.1.38/seerr-0.1.38.tgz
+    version: 0.1.38
   - apiVersion: v2
     appVersion: sha-759e359
     created: "2026-06-03T10:39:38.083546165Z"
@@ -6203,4 +6273,4 @@ entries:
     urls:
     - https://github.com/95gabor/k8s-mediaserver-charts/releases/download/transmission-0.1.1.tgz
     version: 0.1.1
-generated: "2026-06-04T10:32:57.847717533Z"
+generated: "2026-06-04T15:01:50.037555462Z"
