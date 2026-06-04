@@ -73,6 +73,11 @@ jobs:
                   "tag_format": "version_base",  # Uses base version like "2.3.0" (not "2.3.0.5236")
                   "docker_format": "base_version"
               },
+              "plex": {
+                  "repo": "linuxserver/docker-plex",
+                  "tag_format": "version_base",  # linuxserver tags like "1.43.2.10687-...-ls307" -> "1.43.2"
+                  "docker_format": "base_version"
+              },
               "sabnzbd": {
                   "repo": "sabnzbd/sabnzbd",
                   "tag_format": "version",  # Uses version tags like "4.5.5"
