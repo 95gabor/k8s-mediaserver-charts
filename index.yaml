@@ -2,6 +2,29 @@ apiVersion: v1
 entries:
   jackett:
   - apiVersion: v2
+    appVersion: 0.24.2043
+    created: "2026-06-10T09:29:42.403851439Z"
+    description: A Helm chart for Jackett
+    digest: 132efc4ae3e724f8681286a8a1d3b44fe5cd53ede77094e829355b3aface8f20
+    home: https://github.com/Jackett/Jackett
+    icon: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/jackett-logo.png
+    keywords:
+    - jackett
+    - torrent
+    - tracker
+    - indexer
+    - media
+    maintainers:
+    - name: 95gabor
+    name: jackett
+    sources:
+    - https://github.com/Jackett/Jackett
+    - https://github.com/95gabor/k8s-mediaserver-charts
+    type: application
+    urls:
+    - https://github.com/95gabor/k8s-mediaserver-charts/releases/download/jackett-0.1.41/jackett-0.1.41.tgz
+    version: 0.1.41
+  - apiVersion: v2
     appVersion: 0.24.2031
     created: "2026-06-07T09:45:37.772037602Z"
     description: A Helm chart for Jackett
@@ -4468,6 +4491,29 @@ entries:
     version: 0.1.1
   prowlarr:
   - apiVersion: v2
+    appVersion: 2.4.0
+    created: "2026-06-10T09:29:42.640975595Z"
+    description: A Helm chart for Prowlarr
+    digest: b5d27a3bee39989484abd4d6212d2321c4d86f88f363ad3ee04a888878d98979
+    home: https://github.com/Prowlarr/Prowlarr
+    icon: https://raw.githubusercontent.com/Prowlarr/Prowlarr/develop/Logo/256.png
+    keywords:
+    - prowlarr
+    - indexer
+    - tracker
+    - pvr
+    - media
+    maintainers:
+    - name: 95gabor
+    name: prowlarr
+    sources:
+    - https://github.com/Prowlarr/Prowlarr
+    - https://github.com/95gabor/k8s-mediaserver-charts
+    type: application
+    urls:
+    - https://github.com/95gabor/k8s-mediaserver-charts/releases/download/prowlarr-0.1.12/prowlarr-0.1.12.tgz
+    version: 0.1.12
+  - apiVersion: v2
     appVersion: 2.3.5
     created: "2026-04-05T10:22:40.399572568Z"
     description: A Helm chart for Prowlarr
@@ -4698,6 +4744,29 @@ entries:
     - https://github.com/95gabor/k8s-mediaserver-charts/releases/download/prowlarr-0.1.1.tgz
     version: 0.1.1
   radarr:
+  - apiVersion: v2
+    appVersion: 6.2.1
+    created: "2026-06-10T09:29:42.825139475Z"
+    description: A Helm chart for Radarr
+    digest: e08c39eeeef294035796b40768131f1bdfb4f9cc6dcae77f91ef46caa20f436b
+    home: https://radarr.video/
+    icon: https://raw.githubusercontent.com/Radarr/Radarr/develop/Logo/256.png
+    keywords:
+    - radarr
+    - movies
+    - tracker
+    - media
+    - automation
+    maintainers:
+    - name: 95gabor
+    name: radarr
+    sources:
+    - https://github.com/Radarr/Radarr
+    - https://github.com/95gabor/k8s-mediaserver-charts
+    type: application
+    urls:
+    - https://github.com/95gabor/k8s-mediaserver-charts/releases/download/radarr-0.1.12/radarr-0.1.12.tgz
+    version: 0.1.12
   - apiVersion: v2
     appVersion: 6.1.1
     created: "2026-03-27T09:39:11.890956253Z"
@@ -5160,6 +5229,30 @@ entries:
     - https://github.com/95gabor/k8s-mediaserver-charts/releases/download/sabnzbd-0.1.1.tgz
     version: 0.1.1
   seerr:
+  - apiVersion: v2
+    appVersion: sha-a8f1780
+    created: "2026-06-10T09:29:42.995504322Z"
+    description: A Helm chart for Seerr
+    digest: 123354b0fb77dc072e3c8a8aa2e4bd9e3c4d700e18f47ab55214f603a497f489
+    home: https://github.com/seerr-team/seerr
+    icon: https://raw.githubusercontent.com/seerr-team/seerr/main/public/logo_full.svg
+    keywords:
+    - seerr
+    - media
+    - request
+    - discovery
+    - plex
+    - jellyfin
+    maintainers:
+    - name: 95gabor
+    name: seerr
+    sources:
+    - https://github.com/seerr-team/seerr
+    - https://github.com/95gabor/k8s-mediaserver-charts
+    type: application
+    urls:
+    - https://github.com/95gabor/k8s-mediaserver-charts/releases/download/seerr-0.1.40/seerr-0.1.40.tgz
+    version: 0.1.40
   - apiVersion: v2
     appVersion: sha-0a305f6
     created: "2026-06-06T09:45:14.226151359Z"
@@ -6567,4 +6660,4 @@ entries:
     urls:
     - https://github.com/95gabor/k8s-mediaserver-charts/releases/download/transmission-0.1.1.tgz
     version: 0.1.1
-generated: "2026-06-07T09:49:20.738583396Z"
+generated: "2026-06-10T09:29:42.996144237Z"
