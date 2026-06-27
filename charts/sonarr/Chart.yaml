@@ -2,8 +2,8 @@ apiVersion: v2
 name: sonarr
 description: A Helm chart for Sonarr
 type: application
-version: 0.1.12
-appVersion: 4.0.18
+version: 0.1.13
+appVersion: 4.0.19
 icon: https://raw.githubusercontent.com/Sonarr/Sonarr/develop/Logo/256.png
 home: https://sonarr.tv/
 sources:
