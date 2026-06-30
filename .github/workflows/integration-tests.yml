@@ -68,13 +68,11 @@ jobs:
       - name: Deploy ingress to newly created cluster
         run: test/kind/setup-ingress.sh
 
-      - name: Prepare test namespace
-        run: kubectl apply -f test/kind/namespace.yaml
-
       - name: Deploy Helm chart
         run: |
           helm upgrade --install k8s-mediaserver ./charts/k8s-mediaserver \
             -n mediaserver \
+            --create-namespace \
             -f test/kind/helm-values.yaml
           test/kind/wait-for-pods.sh mediaserver
 
