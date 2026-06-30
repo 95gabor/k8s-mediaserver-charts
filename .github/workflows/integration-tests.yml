@@ -68,10 +68,8 @@ jobs:
       - name: Deploy ingress to newly created cluster
         run: test/kind/setup-ingress.sh
 
-      - name: Prepare test namespace and storage
-        run: |
-          kubectl apply -f test/kind/namespace.yaml
-          kubectl apply -f test/kind/mediaserver-pvc.yaml
+      - name: Prepare test namespace
+        run: kubectl apply -f test/kind/namespace.yaml
 
       - name: Deploy Helm chart
         run: |
