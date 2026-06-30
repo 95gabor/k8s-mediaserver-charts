@@ -51,9 +51,10 @@ jobs:
         with:
           version: "v3.13.0"
 
-      - name: Add Helm repositories for dependencies
+      - name: Add Helm repositories
         run: |
           helm repo add k8s-mediaserver-charts https://95gabor.github.io/k8s-mediaserver-charts
+          helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
           helm repo update
 
       - name: Update umbrella chart dependencies
@@ -65,18 +66,23 @@ jobs:
           cluster_name: kind
           config: test/kind/kind-config.yaml
 
-      - name: Deploy ingress to newly created cluster
-        run: test/kind/setup-ingress.sh
-
-      - name: Prepare test namespace
-        run: kubectl apply -f test/kind/namespace.yaml
+      - name: Deploy ingress controller
+        run: |
+          helm upgrade --install ingress-nginx ingress-nginx/ingress-nginx \
+            --namespace ingress-nginx \
+            --create-namespace \
+            --wait \
+            --timeout 5m \
+            -f test/kind/ingress-nginx-values.yaml
 
       - name: Deploy Helm chart
         run: |
           helm upgrade --install k8s-mediaserver ./charts/k8s-mediaserver \
             -n mediaserver \
+            --create-namespace \
+            --wait \
+            --timeout 10m \
             -f test/kind/helm-values.yaml
-          test/kind/wait-for-pods.sh mediaserver
 
       - name: Test application endpoints
         run: test/kind/test-endpoints.sh
