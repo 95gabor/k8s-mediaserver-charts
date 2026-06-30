@@ -268,6 +268,11 @@ plex:
    pre-commit run --all-files
    ```
 
+### Local testing and automation
+
+- [KinD integration tests](test/README.md) — run the umbrella chart deploy smoke test locally with an isolated KinD cluster
+- [Maintenance scripts](scripts/README.md) — run app version and umbrella dependency update scripts locally
+
 ### Development Workflow
 
 #### Linting
