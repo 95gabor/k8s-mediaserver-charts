@@ -1,0 +1,21 @@
+controller:
+  hostPort:
+    enabled: true
+    ports:
+      http: 80
+      https: 443
+  service:
+    type: LoadBalancer
+  watchIngressWithoutClass: true
+  publishService:
+    enabled: false
+  extraArgs:
+    publish-status-address: localhost
+  terminationGracePeriodSeconds: 0
+  tolerations:
+    - key: node-role.kubernetes.io/control-plane
+      operator: Equal
+      effect: NoSchedule
+    - key: node-role.kubernetes.io/master
+      operator: Equal
+      effect: NoSchedule
