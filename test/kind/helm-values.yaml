@@ -1,0 +1,11 @@
+general:
+  storage:
+    pvcName: mediaserver-pvc
+    pvcStorageClass: standard
+    accessMode: ReadWriteOnce
+
+plex:
+  enabled: false
+
+jellyfin:
+  enabled: false
