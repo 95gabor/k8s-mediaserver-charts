@@ -2,7 +2,7 @@ apiVersion: v2
 name: transmission
 description: A Helm chart for Transmission
 type: application
-version: 0.1.14
+version: 0.1.15
 appVersion: 4.1.2
 icon: https://simpleicons.org/icons/transmission.svg
 home: https://transmissionbt.com/
