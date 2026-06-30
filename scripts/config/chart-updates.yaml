@@ -1,0 +1,45 @@
+charts:
+  jackett:
+    repo: Jackett/Jackett
+    tag_format: version
+    docker_image: linuxserver/jackett
+
+  jellyfin:
+    repo: jellyfin/jellyfin
+    tag_format: version
+    docker_image: linuxserver/jellyfin
+
+  sonarr:
+    repo: Sonarr/Sonarr
+    tag_format: version_base
+    docker_image: linuxserver/sonarr
+
+  radarr:
+    repo: Radarr/Radarr
+    tag_format: version_base
+    docker_image: linuxserver/radarr
+
+  prowlarr:
+    repo: Prowlarr/Prowlarr
+    tag_format: version_base
+    docker_image: linuxserver/prowlarr
+
+  plex:
+    repo: linuxserver/docker-plex
+    tag_format: version_base
+    docker_image: linuxserver/plex
+
+  sabnzbd:
+    repo: sabnzbd/sabnzbd
+    tag_format: version
+    docker_image: linuxserver/sabnzbd
+
+  seerr:
+    repo: seerr-team/seerr
+    tag_format: container_registry
+    container_registry: ghcr.io/seerr-team/seerr
+
+  transmission:
+    repo: linuxserver/docker-transmission
+    tag_format: linuxserver_app_version
+    docker_image: linuxserver/transmission

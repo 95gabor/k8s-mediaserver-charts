@@ -31,71 +31,11 @@ jobs:
         uses: pre-commit/action@v3
 
       - name: Install dependencies
-        run: |
-          pip install pyyaml
+        run: pip install -r scripts/requirements.txt
 
       - name: Check for subchart version changes
         id: check
-        run: |
-          python << 'EOF'
-          import yaml
-          import os
-          import json
-          from pathlib import Path
-
-          charts_dir = Path("charts")
-          umbrella_chart_path = charts_dir / "k8s-mediaserver" / "Chart.yaml"
-          updates = []
-
-          # Read umbrella chart
-          with open(umbrella_chart_path, 'r') as f:
-              umbrella_data = yaml.safe_load(f)
-
-          # Get current dependency versions from umbrella chart
-          current_deps = {}
-          if "dependencies" in umbrella_data:
-              for dep in umbrella_data["dependencies"]:
-                  current_deps[dep["name"]] = dep.get("version", "")
-
-          # Read all subchart Chart.yaml files
-          subchart_dirs = [d for d in charts_dir.iterdir() if d.is_dir() and d.name != "k8s-mediaserver"]
-
-          for subchart_dir in subchart_dirs:
-              chart_path = subchart_dir / "Chart.yaml"
-              if not chart_path.exists():
-                  continue
-
-              chart_name = subchart_dir.name
-
-              with open(chart_path, 'r') as f:
-                  chart_data = yaml.safe_load(f)
-
-              current_version = chart_data.get("version", "")
-
-              # Check if this subchart is a dependency in the umbrella chart
-              if chart_name in current_deps:
-                  umbrella_version = current_deps[chart_name]
-
-                  if current_version != umbrella_version:
-                      updates.append({
-                          "chart": chart_name,
-                          "current": umbrella_version,
-                          "latest": current_version
-                      })
-                      print(f"📦 {chart_name}: {umbrella_version} -> {current_version}")
-
-          if updates:
-              print(f"\n✅ Found {len(updates)} dependency updates needed")
-              with open("updates.json", "w") as f:
-                  json.dump(updates, f, indent=2)
-              with open(os.environ["GITHUB_OUTPUT"], "a") as f:
-                  f.write(f"has_updates=true\n")
-                  f.write(f"updates_count={len(updates)}\n")
-          else:
-              print("✅ All umbrella chart dependencies are up to date")
-              with open(os.environ["GITHUB_OUTPUT"], "a") as f:
-                  f.write("has_updates=false\n")
-          EOF
+        run: python scripts/check_umbrella_deps.py
 
       - name: Show updates
         if: steps.check.outputs.has_updates == 'true'
@@ -105,81 +45,16 @@ jobs:
 
       - name: Update umbrella chart dependencies
         if: steps.check.outputs.has_updates == 'true'
-        run: |
-          python << 'EOF'
-          import yaml
-          import json
-          from pathlib import Path
-
-          charts_dir = Path("charts")
-          umbrella_chart_path = charts_dir / "k8s-mediaserver" / "Chart.yaml"
-
-          with open("updates.json", "r") as f:
-              updates = json.load(f)
-
-          # Read umbrella chart
-          with open(umbrella_chart_path, 'r') as f:
-              umbrella_data = yaml.safe_load(f)
-
-          # Update dependency versions
-          if "dependencies" in umbrella_data:
-              for dep in umbrella_data["dependencies"]:
-                  chart_name = dep["name"]
-                  for update in updates:
-                      if update["chart"] == chart_name:
-                          dep["version"] = update["latest"]
-                          print(f"Updated dependency {chart_name}: {update['current']} -> {update['latest']}")
-
-          # Bump umbrella chart version
-          current_version = umbrella_data.get("version", "0.0.0")
-          version_parts = current_version.split(".")
-          version_parts[-1] = str(int(version_parts[-1]) + 1)
-          new_version = ".".join(version_parts)
-          umbrella_data["version"] = new_version
-          print(f"Bumped umbrella chart version: {current_version} -> {new_version}")
-
-          # Write updated chart
-          with open(umbrella_chart_path, 'w') as f:
-              yaml.dump(umbrella_data, f, default_flow_style=False, sort_keys=False, allow_unicode=True)
-          EOF
+        run: python scripts/update_umbrella_chart.py
 
       - name: Prepare PR body and commit message
         if: steps.check.outputs.has_updates == 'true'
         id: pr_info
-        run: |
-          python << 'EOF'
-          import json
-          import os
-
-          with open("updates.json", "r") as f:
-              updates = json.load(f)
-
-          commit_lines = []
-          for update in updates:
-              commit_lines.append(f"- {update['chart']}: {update['current']} -> {update['latest']}")
-
-          body_lines = ["Automated update of umbrella chart dependencies.", ""]
-          body_lines.append("The following subchart dependencies have been updated:")
-          body_lines.append("")
-          for update in updates:
-              body_lines.append(f"- **{update['chart']}**: {update['current']} → {update['latest']}")
-          body_lines.append("")
-          body_lines.append("The umbrella chart version has been bumped accordingly.")
-          body_lines.append("")
-          body_lines.append("This PR was automatically created by the update-umbrella-deps workflow.")
-
-          commit_msg = "chore: update umbrella chart dependencies\n\n" + "\n".join(commit_lines)
-          pr_body = "\n".join(body_lines)
-
-          with open(os.environ["GITHUB_OUTPUT"], "a") as f:
-              f.write(f"commit_message<<EOF\n{commit_msg}\nEOF\n")
-              f.write(f"pr_body<<EOF\n{pr_body}\nEOF\n")
-          EOF
+        run: python scripts/prepare_umbrella_pr.py
 
       - name: Clean up temporary files
         if: steps.check.outputs.has_updates == 'true'
-        run: |
-          rm -f updates.json
+        run: rm -f updates.json
 
       - name: Run pre-commit hooks
         if: steps.check.outputs.has_updates == 'true'
