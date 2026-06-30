@@ -11,13 +11,21 @@ jobs:
     runs-on: ubuntu-24.04
     name: Run Helm linting
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - name: Setup helm
-        uses: azure/setup-helm@v4
+        uses: azure/setup-helm@v5
         with:
           version: "v3.13.0"
         id: install-helm
+
+      - name: Add Helm repositories for dependencies
+        run: |
+          helm repo add k8s-mediaserver-charts https://95gabor.github.io/k8s-mediaserver-charts
+          helm repo update
+
+      - name: Update umbrella chart dependencies
+        run: helm dependency update charts/k8s-mediaserver
 
       - name: Lint Helm template
         run: helm lint charts/k8s-mediaserver
@@ -34,15 +42,23 @@ jobs:
       jellyfin_ingress_host: k8s-jelly.k8s.test
     runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - name: Setup helm
-        uses: azure/setup-helm@v4
+        uses: azure/setup-helm@v5
         with:
           version: "v3.13.0"
 
+      - name: Add Helm repositories for dependencies
+        run: |
+          helm repo add k8s-mediaserver-charts https://95gabor.github.io/k8s-mediaserver-charts
+          helm repo update
+
+      - name: Update umbrella chart dependencies
+        run: helm dependency update charts/k8s-mediaserver
+
       - name: Kind Cluster
-        uses: helm/kind-action@v1.11.0
+        uses: helm/kind-action@v1
         with:
           cluster_name: kind
           config: |
