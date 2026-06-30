@@ -4,6 +4,8 @@ on:
     types: [opened, reopened, edited, synchronize]
     paths:
       - "charts/k8s-mediaserver/**"
+      - ".github/workflows/integration-tests.yml"
+      - "test/kind/**"
   workflow_dispatch:
 
 jobs:
@@ -61,73 +63,24 @@ jobs:
         uses: helm/kind-action@v1
         with:
           cluster_name: kind
-          config: |
-            kind: Cluster
-            apiVersion: kind.x-k8s.io/v1alpha4
-            nodes:
-            - role: control-plane
-              kubeadmConfigPatches:
-              - |
-                kind: InitConfiguration
-                nodeRegistration:
-                  kubeletExtraArgs:
-                    node-labels: "ingress-ready=true"
-              extraPortMappings:
-              - containerPort: 80
-                hostPort: 80
-                protocol: TCP
-              - containerPort: 443
-                hostPort: 443
-                protocol: TCP
+          config: test/kind/kind-config.yaml
 
       - name: Deploy ingress to newly created cluster
-        run: |
-          kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/main/deploy/static/provider/kind/deploy.yaml
-          while [[ $(kubectl get pods -n ingress-nginx -l app.kubernetes.io/component=controller -o 'jsonpath={..status.conditions[?(@.type=="Ready")].status}') != "True" ]]; do echo "Waiting for ingress pod to be ready" && sleep 5; done
+        run: test/kind/setup-ingress.sh
 
-      - name: Create namespace
-        run: kubectl create ns mediaserver
-
-      - name: Create PVC for testing
-        run: |
-          kubectl apply -f - <<EOF
-          apiVersion: v1
-          kind: PersistentVolumeClaim
-          metadata:
-            name: mediaserver-pvc
-            namespace: mediaserver
-          spec:
-            accessModes:
-              - ReadWriteOnce
-            storageClassName: standard
-            resources:
-              requests:
-                storage: 5Gi
-          EOF
+      - name: Prepare test namespace
+        run: kubectl apply -f test/kind/namespace.yaml
 
       - name: Deploy Helm chart
         run: |
           helm upgrade --install k8s-mediaserver ./charts/k8s-mediaserver \
             -n mediaserver \
-            --set general.storage.pvcName=mediaserver-pvc \
-            --set general.storage.pvcStorageClass=standard \
-            --set general.storage.accessMode=ReadWriteOnce \
-            --set plex.enabled=false \
-            --set jellyfin.enabled=false
-          sleep 15
-          for pod in $(kubectl get pods -n mediaserver | awk 'NR>1{ print $1 }'); do
-            while [[ $(kubectl get pods $pod -n mediaserver -o 'jsonpath={..status.conditions[?(@.type=="Ready")].status}') != "True" ]]; do
-              echo "Waiting for mediaserver pods to be ready" && sleep 10
-            done
-          done
-          sleep 30
+            -f test/kind/helm-values.yaml
+          test/kind/wait-for-pods.sh mediaserver
 
       - name: Test application endpoints
-        run: |
-          sudo echo "127.0.0.1   ${{ env.plex_ingress_host }} ${{ env.ingress_host }}" | sudo tee -a /etc/hosts
-          sudo echo "127.0.0.1   ${{ env.jellyfin_ingress_host }} ${{ env.ingress_host }}" | sudo tee -a /etc/hosts
-          wget --retry-on-http-error=503,500 ${{ env.ingress_host }}/sonarr || true
-          wget --retry-on-http-error=503,500 ${{ env.ingress_host }}/radarr || true
-          wget --retry-on-http-error=503,500 ${{ env.ingress_host }}/sabnzbd || true
-          wget --retry-on-http-error=503,500 ${{ env.ingress_host }}/prowlarr || true
-          wget --retry-on-http-error=503,500 ${{ env.ingress_host }}/jackett || true
+        run: test/kind/test-endpoints.sh
+        env:
+          INGRESS_HOST: ${{ env.ingress_host }}
+          PLEX_INGRESS_HOST: ${{ env.plex_ingress_host }}
+          JELLYFIN_INGRESS_HOST: ${{ env.jellyfin_ingress_host }}
