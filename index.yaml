@@ -2,6 +2,29 @@ apiVersion: v1
 entries:
   jackett:
   - apiVersion: v2
+    appVersion: 0.24.2151
+    created: "2026-07-01T10:44:11.415448521Z"
+    description: A Helm chart for Jackett
+    digest: b95d6555a7533aac49721ac807e4140c07310802a4a0e21b89371d5958eca20c
+    home: https://github.com/Jackett/Jackett
+    icon: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/jackett-logo.png
+    keywords:
+    - jackett
+    - torrent
+    - tracker
+    - indexer
+    - media
+    maintainers:
+    - name: 95gabor
+    name: jackett
+    sources:
+    - https://github.com/Jackett/Jackett
+    - https://github.com/95gabor/k8s-mediaserver-charts
+    type: application
+    urls:
+    - https://github.com/95gabor/k8s-mediaserver-charts/releases/download/jackett-0.1.47/jackett-0.1.47.tgz
+    version: 0.1.47
+  - apiVersion: v2
     appVersion: 0.24.2142
     created: "2026-06-30T09:23:48.324396104Z"
     description: A Helm chart for Jackett
@@ -7025,6 +7048,29 @@ entries:
     version: 0.1.1
   transmission:
   - apiVersion: v2
+    appVersion: 4.1.3
+    created: "2026-07-01T10:44:11.579335355Z"
+    description: A Helm chart for Transmission
+    digest: 02499d5115a1bd250c1158c95b2ada9d695e23bcaadd6f7ba68656ee961ab722
+    home: https://transmissionbt.com/
+    icon: https://simpleicons.org/icons/transmission.svg
+    keywords:
+    - transmission
+    - torrent
+    - bittorrent
+    - download
+    - media
+    maintainers:
+    - name: 95gabor
+    name: transmission
+    sources:
+    - https://github.com/transmission/transmission
+    - https://github.com/95gabor/k8s-mediaserver-charts
+    type: application
+    urls:
+    - https://github.com/95gabor/k8s-mediaserver-charts/releases/download/transmission-0.1.16/transmission-0.1.16.tgz
+    version: 0.1.16
+  - apiVersion: v2
     appVersion: 4.1.2
     created: "2026-06-30T12:04:20.689407323Z"
     description: A Helm chart for Transmission
@@ -7323,4 +7369,4 @@ entries:
     urls:
     - https://github.com/95gabor/k8s-mediaserver-charts/releases/download/transmission-0.1.1.tgz
     version: 0.1.1
-generated: "2026-06-30T12:10:48.65705719Z"
+generated: "2026-07-01T10:44:11.58049019Z"
