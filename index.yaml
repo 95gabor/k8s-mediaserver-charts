@@ -2,6 +2,29 @@ apiVersion: v1
 entries:
   jackett:
   - apiVersion: v2
+    appVersion: 0.24.2213
+    created: "2026-07-13T11:22:50.95378801Z"
+    description: A Helm chart for Jackett
+    digest: 79d5533d9ea9c7da0d75f116169236117403875fd4309cd24d3898489df85756
+    home: https://github.com/Jackett/Jackett
+    icon: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/jackett-logo.png
+    keywords:
+    - jackett
+    - torrent
+    - tracker
+    - indexer
+    - media
+    maintainers:
+    - name: 95gabor
+    name: jackett
+    sources:
+    - https://github.com/Jackett/Jackett
+    - https://github.com/95gabor/k8s-mediaserver-charts
+    type: application
+    urls:
+    - https://github.com/95gabor/k8s-mediaserver-charts/releases/download/jackett-0.1.49/jackett-0.1.49.tgz
+    version: 0.1.49
+  - apiVersion: v2
     appVersion: 0.24.2177
     created: "2026-07-05T13:16:52.212638451Z"
     description: A Helm chart for Jackett
@@ -5308,6 +5331,29 @@ entries:
     version: 0.1.1
   radarr:
   - apiVersion: v2
+    appVersion: 6.3.0
+    created: "2026-07-13T11:22:51.100861654Z"
+    description: A Helm chart for Radarr
+    digest: b2b6b346ac86a77eb3760566643458afe84ed977ebef736a1fb175c7286fde77
+    home: https://radarr.video/
+    icon: https://raw.githubusercontent.com/Radarr/Radarr/develop/Logo/256.png
+    keywords:
+    - radarr
+    - movies
+    - tracker
+    - media
+    - automation
+    maintainers:
+    - name: 95gabor
+    name: radarr
+    sources:
+    - https://github.com/Radarr/Radarr
+    - https://github.com/95gabor/k8s-mediaserver-charts
+    type: application
+    urls:
+    - https://github.com/95gabor/k8s-mediaserver-charts/releases/download/radarr-0.1.13/radarr-0.1.13.tgz
+    version: 0.1.13
+  - apiVersion: v2
     appVersion: 6.2.1
     created: "2026-06-10T09:29:42.825139475Z"
     description: A Helm chart for Radarr
@@ -7483,4 +7529,4 @@ entries:
     urls:
     - https://github.com/95gabor/k8s-mediaserver-charts/releases/download/transmission-0.1.1.tgz
     version: 0.1.1
-generated: "2026-07-08T14:37:43.229973504Z"
+generated: "2026-07-13T11:22:51.101798693Z"
