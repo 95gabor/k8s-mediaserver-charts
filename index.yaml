@@ -2,6 +2,29 @@ apiVersion: v1
 entries:
   jackett:
   - apiVersion: v2
+    appVersion: 0.24.2225
+    created: "2026-07-16T12:03:58.427352933Z"
+    description: A Helm chart for Jackett
+    digest: 3c17712bfb17b05616ef11c364f6ad2398c37fc6dc2b0547440bcc501fd15df7
+    home: https://github.com/Jackett/Jackett
+    icon: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/jackett-logo.png
+    keywords:
+    - jackett
+    - torrent
+    - tracker
+    - indexer
+    - media
+    maintainers:
+    - name: 95gabor
+    name: jackett
+    sources:
+    - https://github.com/Jackett/Jackett
+    - https://github.com/95gabor/k8s-mediaserver-charts
+    type: application
+    urls:
+    - https://github.com/95gabor/k8s-mediaserver-charts/releases/download/jackett-0.1.50/jackett-0.1.50.tgz
+    version: 0.1.50
+  - apiVersion: v2
     appVersion: 0.24.2213
     created: "2026-07-13T11:22:50.95378801Z"
     description: A Helm chart for Jackett
@@ -4982,6 +5005,29 @@ entries:
     version: 0.10.2
   plex:
   - apiVersion: v2
+    appVersion: 1.43.3
+    created: "2026-07-16T12:03:58.575278051Z"
+    description: A Helm chart for Plex Media Server
+    digest: 8917ece0c11370f2c3a8fb24a250a12bf220cb884325ab5a50f0fc0f2156cb9b
+    home: https://www.plex.tv/
+    icon: https://simpleicons.org/icons/plex.svg
+    keywords:
+    - plex
+    - media
+    - server
+    - streaming
+    - video
+    maintainers:
+    - name: 95gabor
+    name: plex
+    sources:
+    - https://github.com/plexinc/pms-docker
+    - https://github.com/95gabor/k8s-mediaserver-charts
+    type: application
+    urls:
+    - https://github.com/95gabor/k8s-mediaserver-charts/releases/download/plex-0.1.10/plex-0.1.10.tgz
+    version: 0.1.10
+  - apiVersion: v2
     appVersion: 1.43.2
     created: "2026-06-04T15:01:49.840046475Z"
     description: A Helm chart for Plex Media Server
@@ -7596,4 +7642,4 @@ entries:
     urls:
     - https://github.com/95gabor/k8s-mediaserver-charts/releases/download/transmission-0.1.1.tgz
     version: 0.1.1
-generated: "2026-07-13T14:16:09.291177114Z"
+generated: "2026-07-16T12:03:58.576641561Z"
