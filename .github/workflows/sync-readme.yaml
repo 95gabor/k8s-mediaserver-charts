@@ -25,7 +25,7 @@ jobs:
         with:
           python-version: "3.x"
 
-      - uses: pre-commit/action@v3
+      - uses: pre-commit/action@v3.0.1
 
       - run: |
           find . -type f -name 'README.md' -exec cp --parents '{}' "${{ runner.temp }}" \;
