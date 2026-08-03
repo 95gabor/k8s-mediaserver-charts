@@ -3,7 +3,7 @@ appVersion: 0.10.0
 description: A Helm chart for Kubernetes mediaserver (umbrella chart)
 name: k8s-mediaserver
 type: application
-version: 0.10.67
+version: 0.10.68
 icon: https://raw.githubusercontent.com/cncf/artwork/master/projects/kubernetes/icon/color/kubernetes-icon-color.svg
 home: https://github.com/95gabor/k8s-mediaserver-charts
 sources:
