@@ -1,6 +1,6 @@
 # jackett
 
-![Version: 0.1.59](https://img.shields.io/badge/Version-0.1.59-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 0.24.2315](https://img.shields.io/badge/AppVersion-0.24.2315-informational?style=flat-square)
+![Version: 0.1.61](https://img.shields.io/badge/Version-0.1.61-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 0.24.2327](https://img.shields.io/badge/AppVersion-0.24.2327-informational?style=flat-square)
 
 A Helm chart for Jackett
 
@@ -48,7 +48,7 @@ helm uninstall jackett -n jackett
 | general.ingress.ingressClassName | string | `""` |  |
 | general.ingress_host | string | `"k8s-mediaserver.k8s.test"` |  |
 | general.initContainer.image | string | `"docker.io/ubuntu"` |  |
-| general.initContainer.tag | float | `24.04` |  |
+| general.initContainer.tag | string | `"24.04@sha256:4fbb8e6a8395de5a7550b33509421a2bafbc0aab6c06ba2cef9ebffbc7092d90"` |  |
 | general.nodeSelector | object | `{}` |  |
 | general.pgid | int | `1001` |  |
 | general.podDistribution | string | `"cluster"` |  |
