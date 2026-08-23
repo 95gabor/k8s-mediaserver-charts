@@ -2,6 +2,29 @@ apiVersion: v1
 entries:
   jackett:
   - apiVersion: v2
+    appVersion: 0.24.2451
+    created: "2026-08-23T13:53:32.50792107Z"
+    description: A Helm chart for Jackett
+    digest: b60214f96a190a8f4b391f1d86735153448f51f81d6705b66c10c0a3c8b7ea9b
+    home: https://github.com/Jackett/Jackett
+    icon: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/jackett-logo.png
+    keywords:
+    - jackett
+    - torrent
+    - tracker
+    - indexer
+    - media
+    maintainers:
+    - name: 95gabor
+    name: jackett
+    sources:
+    - https://github.com/Jackett/Jackett
+    - https://github.com/95gabor/k8s-mediaserver-charts
+    type: application
+    urls:
+    - https://github.com/95gabor/k8s-mediaserver-charts/releases/download/jackett-0.1.66/jackett-0.1.66.tgz
+    version: 0.1.66
+  - apiVersion: v2
     appVersion: 0.24.2416
     created: "2026-08-18T23:54:17.092620006Z"
     description: A Helm chart for Jackett
@@ -7163,6 +7186,29 @@ entries:
     version: 0.1.1
   sabnzbd:
   - apiVersion: v2
+    appVersion: 5.1.1
+    created: "2026-08-23T13:53:32.669200347Z"
+    description: A Helm chart for SABnzbd
+    digest: efb8a7f9c6f482a6474cb907e9e737366c08f3dbfbd750c80ae6902c9ca14d73
+    home: https://sabnzbd.org/
+    icon: https://media.sys.truenas.net/apps/sabnzbd/icons/icon.svg
+    keywords:
+    - sabnzbd
+    - usenet
+    - nzb
+    - download
+    - media
+    maintainers:
+    - name: 95gabor
+    name: sabnzbd
+    sources:
+    - https://github.com/sabnzbd/sabnzbd
+    - https://github.com/95gabor/k8s-mediaserver-charts
+    type: application
+    urls:
+    - https://github.com/95gabor/k8s-mediaserver-charts/releases/download/sabnzbd-0.1.15/sabnzbd-0.1.15.tgz
+    version: 0.1.15
+  - apiVersion: v2
     appVersion: 5.1.0
     created: "2026-08-11T09:47:03.934199934Z"
     description: A Helm chart for SABnzbd
@@ -9513,4 +9559,4 @@ entries:
     urls:
     - https://github.com/95gabor/k8s-mediaserver-charts/releases/download/transmission-0.1.1.tgz
     version: 0.1.1
-generated: "2026-08-19T00:03:39.832458453Z"
+generated: "2026-08-23T13:53:32.669922817Z"
