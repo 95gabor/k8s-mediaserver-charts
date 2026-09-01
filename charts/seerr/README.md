@@ -1,6 +1,6 @@
 # seerr
 
-![Version: 0.1.63](https://img.shields.io/badge/Version-0.1.63-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: sha-5a5f059](https://img.shields.io/badge/AppVersion-sha-5a5f059-informational?style=flat-square)
+![Version: 0.1.64](https://img.shields.io/badge/Version-0.1.64-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: sha-5c04640](https://img.shields.io/badge/AppVersion-sha-5c04640-informational?style=flat-square)
 
 A Helm chart for Seerr
 
@@ -49,7 +49,7 @@ helm uninstall seerr -n seerr
 | general.ingress.ingressClassName | string | `""` |  |
 | general.ingress_host | string | `"k8s-mediaserver.k8s.test"` |  |
 | general.initContainer.image | string | `"docker.io/ubuntu"` |  |
-| general.initContainer.tag | string | `"24.04@sha256:4fbb8e6a8395de5a7550b33509421a2bafbc0aab6c06ba2cef9ebffbc7092d90"` |  |
+| general.initContainer.tag | string | `"24.04@sha256:33ceb71981b602c1a7443a53469e4dba065f7503eab3078a2d7a57a2ab987517"` |  |
 | general.nodeSelector | object | `{}` |  |
 | general.pgid | int | `1000` |  |
 | general.podDistribution | string | `"cluster"` |  |
