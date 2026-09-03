@@ -79,7 +79,7 @@ helm uninstall k8s-mediaserver -n k8s-mediaserver
 | general.ingress_host | string | `"k8s-mediaserver.k8s.test"` |  |
 | general.initContainer.image | string | `"docker.io/ubuntu"` |  |
 | general.initContainer.runAsRoot | bool | `true` |  |
-| general.initContainer.tag | string | `"24.04@sha256:4fbb8e6a8395de5a7550b33509421a2bafbc0aab6c06ba2cef9ebffbc7092d90"` |  |
+| general.initContainer.tag | string | `"24.04@sha256:33ceb71981b602c1a7443a53469e4dba065f7503eab3078a2d7a57a2ab987517"` |  |
 | general.jellyfin_ingress_host | string | `"k8s-jelly.k8s.test"` |  |
 | general.nodeSelector | object | `{}` |  |
 | general.plex_ingress_host | string | `"k8s-plex.k8s.test"` |  |
