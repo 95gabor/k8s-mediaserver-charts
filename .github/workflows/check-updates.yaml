@@ -2,8 +2,9 @@ name: Check for App Version Updates
 
 on:
   schedule:
-    # Run every day at 8 AM UTC
+    # Run every day at 8 AM Europe/Budapest
     - cron: "0 8 * * *"
+      timezone: Europe/Budapest
   workflow_dispatch:
 
 jobs:
