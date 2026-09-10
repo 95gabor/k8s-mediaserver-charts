@@ -8040,6 +8040,29 @@ entries:
     version: 0.1.1
   sabnzbd:
   - apiVersion: v2
+    appVersion: 5.1.3
+    created: "2026-09-10T13:54:10.096815245Z"
+    description: A Helm chart for SABnzbd
+    digest: 82cbf44fad47c0c56c314c7c176b0e3368cf369b425c4917a4f4d7d2f5b71601
+    home: https://sabnzbd.org/
+    icon: https://media.sys.truenas.net/apps/sabnzbd/icons/icon.svg
+    keywords:
+    - sabnzbd
+    - usenet
+    - nzb
+    - download
+    - media
+    maintainers:
+    - name: 95gabor
+    name: sabnzbd
+    sources:
+    - https://github.com/sabnzbd/sabnzbd
+    - https://github.com/95gabor/k8s-mediaserver-charts
+    type: application
+    urls:
+    - https://github.com/95gabor/k8s-mediaserver-charts/releases/download/sabnzbd-0.1.17/sabnzbd-0.1.17.tgz
+    version: 0.1.17
+  - apiVersion: v2
     appVersion: 5.1.2
     created: "2026-08-27T19:04:36.037844045Z"
     description: A Helm chart for SABnzbd
@@ -8385,6 +8408,30 @@ entries:
     - https://github.com/95gabor/k8s-mediaserver-charts/releases/download/sabnzbd-0.1.1.tgz
     version: 0.1.1
   seerr:
+  - apiVersion: v2
+    appVersion: sha-68c5bc8
+    created: "2026-09-10T13:54:10.290229107Z"
+    description: A Helm chart for Seerr
+    digest: b34aa736648423256f684ca288377f3b1c16f54890339c2686668739a433f253
+    home: https://github.com/seerr-team/seerr
+    icon: https://raw.githubusercontent.com/seerr-team/seerr/main/public/logo_full.svg
+    keywords:
+    - seerr
+    - media
+    - request
+    - discovery
+    - plex
+    - jellyfin
+    maintainers:
+    - name: 95gabor
+    name: seerr
+    sources:
+    - https://github.com/seerr-team/seerr
+    - https://github.com/95gabor/k8s-mediaserver-charts
+    type: application
+    urls:
+    - https://github.com/95gabor/k8s-mediaserver-charts/releases/download/seerr-0.1.70/seerr-0.1.70.tgz
+    version: 0.1.70
   - apiVersion: v2
     appVersion: sha-6f5a177
     created: "2026-09-08T11:12:30.064590499Z"
@@ -10652,4 +10699,4 @@ entries:
     urls:
     - https://github.com/95gabor/k8s-mediaserver-charts/releases/download/transmission-0.1.1.tgz
     version: 0.1.1
-generated: "2026-09-08T11:19:00.152009582Z"
+generated: "2026-09-10T13:54:10.290986372Z"
