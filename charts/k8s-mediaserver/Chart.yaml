@@ -3,7 +3,7 @@ appVersion: 0.10.0
 description: A Helm chart for Kubernetes mediaserver (umbrella chart)
 name: k8s-mediaserver
 type: application
-version: 0.10.82
+version: 0.10.83
 icon: https://raw.githubusercontent.com/cncf/artwork/master/projects/kubernetes/icon/color/kubernetes-icon-color.svg
 home: https://github.com/95gabor/k8s-mediaserver-charts
 sources:
@@ -46,11 +46,11 @@ dependencies:
   repository: https://95gabor.github.io/k8s-mediaserver-charts
   condition: transmission.enabled
 - name: sabnzbd
-  version: 0.1.16
+  version: 0.1.17
   repository: https://95gabor.github.io/k8s-mediaserver-charts
   condition: sabnzbd.enabled
 - name: plex
-  version: 0.1.11
+  version: 0.1.12
   repository: https://95gabor.github.io/k8s-mediaserver-charts
   condition: plex.enabled
 - name: jellyfin
@@ -58,6 +58,6 @@ dependencies:
   repository: https://95gabor.github.io/k8s-mediaserver-charts
   condition: jellyfin.enabled
 - name: seerr
-  version: 0.1.69
+  version: 0.1.71
   repository: https://95gabor.github.io/k8s-mediaserver-charts
   condition: seerr.enabled
