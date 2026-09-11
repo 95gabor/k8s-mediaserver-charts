@@ -7232,6 +7232,29 @@ entries:
     version: 0.10.2
   plex:
   - apiVersion: v2
+    appVersion: 1.43.4
+    created: "2026-09-11T11:35:22.649993525Z"
+    description: A Helm chart for Plex Media Server
+    digest: f42714b29c874f14b3fab1109605b014a1dcd3c0b0a32d96130f54f6cdf321e4
+    home: https://www.plex.tv/
+    icon: https://simpleicons.org/icons/plex.svg
+    keywords:
+    - plex
+    - media
+    - server
+    - streaming
+    - video
+    maintainers:
+    - name: 95gabor
+    name: plex
+    sources:
+    - https://github.com/plexinc/pms-docker
+    - https://github.com/95gabor/k8s-mediaserver-charts
+    type: application
+    urls:
+    - https://github.com/95gabor/k8s-mediaserver-charts/releases/download/plex-0.1.12/plex-0.1.12.tgz
+    version: 0.1.12
+  - apiVersion: v2
     appVersion: 1.43.3
     created: "2026-08-04T11:41:49.959584405Z"
     description: A Helm chart for Plex Media Server
@@ -8408,6 +8431,30 @@ entries:
     - https://github.com/95gabor/k8s-mediaserver-charts/releases/download/sabnzbd-0.1.1.tgz
     version: 0.1.1
   seerr:
+  - apiVersion: v2
+    appVersion: sha-1dbf19b
+    created: "2026-09-11T11:35:22.849636346Z"
+    description: A Helm chart for Seerr
+    digest: 81bac6a4e8665d02db8bc86423d2ef2d72b99ef074a24a8363b34820fb9c93de
+    home: https://github.com/seerr-team/seerr
+    icon: https://raw.githubusercontent.com/seerr-team/seerr/main/public/logo_full.svg
+    keywords:
+    - seerr
+    - media
+    - request
+    - discovery
+    - plex
+    - jellyfin
+    maintainers:
+    - name: 95gabor
+    name: seerr
+    sources:
+    - https://github.com/seerr-team/seerr
+    - https://github.com/95gabor/k8s-mediaserver-charts
+    type: application
+    urls:
+    - https://github.com/95gabor/k8s-mediaserver-charts/releases/download/seerr-0.1.71/seerr-0.1.71.tgz
+    version: 0.1.71
   - apiVersion: v2
     appVersion: sha-68c5bc8
     created: "2026-09-10T13:54:10.290229107Z"
@@ -10699,4 +10746,4 @@ entries:
     urls:
     - https://github.com/95gabor/k8s-mediaserver-charts/releases/download/transmission-0.1.1.tgz
     version: 0.1.1
-generated: "2026-09-10T13:54:10.290986372Z"
+generated: "2026-09-11T11:35:22.850158482Z"
