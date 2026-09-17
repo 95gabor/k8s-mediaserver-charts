@@ -7800,6 +7800,29 @@ entries:
     version: 0.1.1
   prowlarr:
   - apiVersion: v2
+    appVersion: 2.6.5
+    created: "2026-09-17T11:41:04.647902769Z"
+    description: A Helm chart for Prowlarr
+    digest: 97b8b60f71687ad387b447761e1fe393ae52a6932e292d22cac03d0bff03ee79
+    home: https://github.com/Prowlarr/Prowlarr
+    icon: https://raw.githubusercontent.com/Prowlarr/Prowlarr/develop/Logo/256.png
+    keywords:
+    - prowlarr
+    - indexer
+    - tracker
+    - pvr
+    - media
+    maintainers:
+    - name: 95gabor
+    name: prowlarr
+    sources:
+    - https://github.com/Prowlarr/Prowlarr
+    - https://github.com/95gabor/k8s-mediaserver-charts
+    type: application
+    urls:
+    - https://github.com/95gabor/k8s-mediaserver-charts/releases/download/prowlarr-0.1.15/prowlarr-0.1.15.tgz
+    version: 0.1.15
+  - apiVersion: v2
     appVersion: 2.5.2
     created: "2026-08-04T11:41:50.105403738Z"
     description: A Helm chart for Prowlarr
@@ -8099,6 +8122,29 @@ entries:
     - https://github.com/95gabor/k8s-mediaserver-charts/releases/download/prowlarr-0.1.1.tgz
     version: 0.1.1
   radarr:
+  - apiVersion: v2
+    appVersion: 6.4.4
+    created: "2026-09-17T11:41:04.799291376Z"
+    description: A Helm chart for Radarr
+    digest: 83dedd4517ed28923f160606f95e52bb246abc3a593b813b13ffaf457a97e5e1
+    home: https://radarr.video/
+    icon: https://raw.githubusercontent.com/Radarr/Radarr/develop/Logo/256.png
+    keywords:
+    - radarr
+    - movies
+    - tracker
+    - media
+    - automation
+    maintainers:
+    - name: 95gabor
+    name: radarr
+    sources:
+    - https://github.com/Radarr/Radarr
+    - https://github.com/95gabor/k8s-mediaserver-charts
+    type: application
+    urls:
+    - https://github.com/95gabor/k8s-mediaserver-charts/releases/download/radarr-0.1.15/radarr-0.1.15.tgz
+    version: 0.1.15
   - apiVersion: v2
     appVersion: 6.3.0
     created: "2026-08-04T11:41:50.217228205Z"
@@ -8768,6 +8814,30 @@ entries:
     - https://github.com/95gabor/k8s-mediaserver-charts/releases/download/sabnzbd-0.1.1.tgz
     version: 0.1.1
   seerr:
+  - apiVersion: v2
+    appVersion: sha-59d5947
+    created: "2026-09-17T11:41:05.048524351Z"
+    description: A Helm chart for Seerr
+    digest: 65707c8548062e3730e62ecc9820995d9542caf18ba384786f593f25fcd678be
+    home: https://github.com/seerr-team/seerr
+    icon: https://raw.githubusercontent.com/seerr-team/seerr/main/public/logo_full.svg
+    keywords:
+    - seerr
+    - media
+    - request
+    - discovery
+    - plex
+    - jellyfin
+    maintainers:
+    - name: 95gabor
+    name: seerr
+    sources:
+    - https://github.com/seerr-team/seerr
+    - https://github.com/95gabor/k8s-mediaserver-charts
+    type: application
+    urls:
+    - https://github.com/95gabor/k8s-mediaserver-charts/releases/download/seerr-0.1.76/seerr-0.1.76.tgz
+    version: 0.1.76
   - apiVersion: v2
     appVersion: sha-6fa7473
     created: "2026-09-15T11:06:55.083900254Z"
@@ -10522,6 +10592,30 @@ entries:
     version: 0.1.1
   sonarr:
   - apiVersion: v2
+    appVersion: 4.0.20
+    created: "2026-09-17T11:41:05.275157123Z"
+    description: A Helm chart for Sonarr
+    digest: cb50f70e587c300c9fb5b4fd604726c3e0e8924f6f8e7a319e2acea9e17c7648
+    home: https://sonarr.tv/
+    icon: https://raw.githubusercontent.com/Sonarr/Sonarr/develop/Logo/256.png
+    keywords:
+    - sonarr
+    - tv
+    - series
+    - tracker
+    - media
+    - automation
+    maintainers:
+    - name: 95gabor
+    name: sonarr
+    sources:
+    - https://github.com/Sonarr/Sonarr
+    - https://github.com/95gabor/k8s-mediaserver-charts
+    type: application
+    urls:
+    - https://github.com/95gabor/k8s-mediaserver-charts/releases/download/sonarr-0.1.15/sonarr-0.1.15.tgz
+    version: 0.1.15
+  - apiVersion: v2
     appVersion: 4.0.19
     created: "2026-08-04T11:41:50.538398783Z"
     description: A Helm chart for Sonarr
@@ -11179,4 +11273,4 @@ entries:
     urls:
     - https://github.com/95gabor/k8s-mediaserver-charts/releases/download/transmission-0.1.1.tgz
     version: 0.1.1
-generated: "2026-09-15T11:14:02.30272943Z"
+generated: "2026-09-17T11:41:05.275938047Z"
