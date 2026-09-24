@@ -24,7 +24,7 @@ general:
   initContainer:
     # https://hub.docker.com/_/ubuntu/tags
     image: docker.io/ubuntu
-    tag: "24.04@sha256:33ceb71981b602c1a7443a53469e4dba065f7503eab3078a2d7a57a2ab987517"
+    tag: "24.04@sha256:008173c23f95b170204355c12626cb5a965d779a7e1283b09e9cffbb1bf33ca3"
     # Set to false if cluster enforces non-root policy
     # Note: When false, init container cannot chown root-owned files
     # fsGroup will handle group ownership automatically
