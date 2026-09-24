@@ -49,7 +49,7 @@ helm uninstall seerr -n seerr
 | general.ingress.ingressClassName | string | `""` |  |
 | general.ingress_host | string | `"k8s-mediaserver.k8s.test"` |  |
 | general.initContainer.image | string | `"docker.io/ubuntu"` |  |
-| general.initContainer.tag | string | `"24.04@sha256:33ceb71981b602c1a7443a53469e4dba065f7503eab3078a2d7a57a2ab987517"` |  |
+| general.initContainer.tag | string | `"24.04@sha256:008173c23f95b170204355c12626cb5a965d779a7e1283b09e9cffbb1bf33ca3"` |  |
 | general.nodeSelector | object | `{}` |  |
 | general.pgid | int | `1000` |  |
 | general.podDistribution | string | `"cluster"` |  |
