@@ -2190,6 +2190,73 @@ entries:
   k8s-mediaserver:
   - apiVersion: v2
     appVersion: 0.10.0
+    created: "2026-09-30T19:03:16.702835968Z"
+    dependencies:
+    - condition: sonarr.enabled
+      name: sonarr
+      repository: https://95gabor.github.io/k8s-mediaserver-charts
+      version: 0.1.15
+    - condition: radarr.enabled
+      name: radarr
+      repository: https://95gabor.github.io/k8s-mediaserver-charts
+      version: 0.1.15
+    - condition: jackett.enabled
+      name: jackett
+      repository: https://95gabor.github.io/k8s-mediaserver-charts
+      version: 0.1.82
+    - condition: prowlarr.enabled
+      name: prowlarr
+      repository: https://95gabor.github.io/k8s-mediaserver-charts
+      version: 0.1.15
+    - condition: transmission.enabled
+      name: transmission
+      repository: https://95gabor.github.io/k8s-mediaserver-charts
+      version: 0.1.17
+    - condition: sabnzbd.enabled
+      name: sabnzbd
+      repository: https://95gabor.github.io/k8s-mediaserver-charts
+      version: 0.1.17
+    - condition: plex.enabled
+      name: plex
+      repository: https://95gabor.github.io/k8s-mediaserver-charts
+      version: 0.1.12
+    - condition: jellyfin.enabled
+      name: jellyfin
+      repository: https://95gabor.github.io/k8s-mediaserver-charts
+      version: 0.1.17
+    - condition: seerr.enabled
+      name: seerr
+      repository: https://95gabor.github.io/k8s-mediaserver-charts
+      version: 0.1.81
+    description: A Helm chart for Kubernetes mediaserver (umbrella chart)
+    digest: c917d66c7771ff296083b566af4f7573d069c5c6529f91c4530443c0aa88277e
+    home: https://github.com/95gabor/k8s-mediaserver-charts
+    icon: https://raw.githubusercontent.com/cncf/artwork/master/projects/kubernetes/icon/color/kubernetes-icon-color.svg
+    keywords:
+    - media
+    - server
+    - plex
+    - jellyfin
+    - sonarr
+    - radarr
+    - transmission
+    - sabnzbd
+    - jackett
+    - prowlarr
+    - seerr
+    - streaming
+    - automation
+    maintainers:
+    - name: 95gabor
+    name: k8s-mediaserver
+    sources:
+    - https://github.com/95gabor/k8s-mediaserver-charts
+    type: application
+    urls:
+    - https://github.com/95gabor/k8s-mediaserver-charts/releases/download/k8s-mediaserver-0.10.93/k8s-mediaserver-0.10.93.tgz
+    version: 0.10.93
+  - apiVersion: v2
+    appVersion: 0.10.0
     created: "2026-09-28T15:27:14.91420633Z"
     dependencies:
     - condition: sonarr.enabled
@@ -11910,4 +11977,4 @@ entries:
     urls:
     - https://github.com/95gabor/k8s-mediaserver-charts/releases/download/transmission-0.1.1.tgz
     version: 0.1.1
-generated: "2026-09-30T18:58:44.617261018Z"
+generated: "2026-09-30T19:03:16.703428115Z"
