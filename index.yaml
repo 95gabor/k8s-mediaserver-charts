@@ -2,6 +2,29 @@ apiVersion: v1
 entries:
   jackett:
   - apiVersion: v2
+    appVersion: 0.24.2788
+    created: "2026-10-05T04:51:32.097614603Z"
+    description: A Helm chart for Jackett
+    digest: 425b04a26d84b8a4cb933101ef3bc06405ea8b1dcaabc6dda760a6a1a045279f
+    home: https://github.com/Jackett/Jackett
+    icon: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/jackett-logo.png
+    keywords:
+    - jackett
+    - torrent
+    - tracker
+    - indexer
+    - media
+    maintainers:
+    - name: 95gabor
+    name: jackett
+    sources:
+    - https://github.com/Jackett/Jackett
+    - https://github.com/95gabor/k8s-mediaserver-charts
+    type: application
+    urls:
+    - https://github.com/95gabor/k8s-mediaserver-charts/releases/download/jackett-0.1.83/jackett-0.1.83.tgz
+    version: 0.1.83
+  - apiVersion: v2
     appVersion: 0.24.2738
     created: "2026-09-30T18:58:44.388125229Z"
     description: A Helm chart for Jackett
@@ -9399,6 +9422,30 @@ entries:
     version: 0.1.1
   seerr:
   - apiVersion: v2
+    appVersion: sha-2cfbcf8
+    created: "2026-10-05T04:51:32.284527752Z"
+    description: A Helm chart for Seerr
+    digest: e218582c836b6b2879ea5538123a243d7fcb6bfea2348ce3dbfdf1c142d670aa
+    home: https://github.com/seerr-team/seerr
+    icon: https://raw.githubusercontent.com/seerr-team/seerr/main/public/logo_full.svg
+    keywords:
+    - seerr
+    - media
+    - request
+    - discovery
+    - plex
+    - jellyfin
+    maintainers:
+    - name: 95gabor
+    name: seerr
+    sources:
+    - https://github.com/seerr-team/seerr
+    - https://github.com/95gabor/k8s-mediaserver-charts
+    type: application
+    urls:
+    - https://github.com/95gabor/k8s-mediaserver-charts/releases/download/seerr-0.1.82/seerr-0.1.82.tgz
+    version: 0.1.82
+  - apiVersion: v2
     appVersion: sha-e959062
     created: "2026-09-30T18:58:44.616727702Z"
     description: A Helm chart for Seerr
@@ -11977,4 +12024,4 @@ entries:
     urls:
     - https://github.com/95gabor/k8s-mediaserver-charts/releases/download/transmission-0.1.1.tgz
     version: 0.1.1
-generated: "2026-09-30T19:03:16.703428115Z"
+generated: "2026-10-05T04:51:32.285149604Z"
