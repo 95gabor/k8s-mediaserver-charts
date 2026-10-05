@@ -1,6 +1,6 @@
 # jackett
 
-![Version: 0.1.83](https://img.shields.io/badge/Version-0.1.83-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 0.24.2788](https://img.shields.io/badge/AppVersion-0.24.2788-informational?style=flat-square)
+![Version: 0.1.84](https://img.shields.io/badge/Version-0.1.84-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 0.24.2793](https://img.shields.io/badge/AppVersion-0.24.2793-informational?style=flat-square)
 
 A Helm chart for Jackett
 
