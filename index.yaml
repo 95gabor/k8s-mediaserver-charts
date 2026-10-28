@@ -2,6 +2,29 @@ apiVersion: v1
 entries:
   jackett:
   - apiVersion: v2
+    appVersion: 0.24.2949
+    created: "2026-10-28T16:46:25.997144667Z"
+    description: A Helm chart for Jackett
+    digest: b944253ce817e035379030761c73673fbe7456fdec38b905f199f7d3a03cd34e
+    home: https://github.com/Jackett/Jackett
+    icon: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/jackett-logo.png
+    keywords:
+    - jackett
+    - torrent
+    - tracker
+    - indexer
+    - media
+    maintainers:
+    - name: 95gabor
+    name: jackett
+    sources:
+    - https://github.com/Jackett/Jackett
+    - https://github.com/95gabor/k8s-mediaserver-charts
+    type: application
+    urls:
+    - https://github.com/95gabor/k8s-mediaserver-charts/releases/download/jackett-0.1.91/jackett-0.1.91.tgz
+    version: 0.1.91
+  - apiVersion: v2
     appVersion: 0.24.2887
     created: "2026-10-21T12:25:52.055280512Z"
     description: A Helm chart for Jackett
@@ -9219,6 +9242,29 @@ entries:
     version: 0.1.1
   prowlarr:
   - apiVersion: v2
+    appVersion: 2.7.0
+    created: "2026-10-28T16:46:26.22799906Z"
+    description: A Helm chart for Prowlarr
+    digest: b2d9102eef16d27d7d94274b7885a3a781dcb299e9cc1231f4564de46e4ff974
+    home: https://github.com/Prowlarr/Prowlarr
+    icon: https://raw.githubusercontent.com/Prowlarr/Prowlarr/develop/Logo/256.png
+    keywords:
+    - prowlarr
+    - indexer
+    - tracker
+    - pvr
+    - media
+    maintainers:
+    - name: 95gabor
+    name: prowlarr
+    sources:
+    - https://github.com/Prowlarr/Prowlarr
+    - https://github.com/95gabor/k8s-mediaserver-charts
+    type: application
+    urls:
+    - https://github.com/95gabor/k8s-mediaserver-charts/releases/download/prowlarr-0.1.18/prowlarr-0.1.18.tgz
+    version: 0.1.18
+  - apiVersion: v2
     appVersion: 2.6.5
     created: "2026-10-19T10:05:38.936470031Z"
     description: A Helm chart for Prowlarr
@@ -10371,6 +10417,30 @@ entries:
     - https://github.com/95gabor/k8s-mediaserver-charts/releases/download/sabnzbd-0.1.1.tgz
     version: 0.1.1
   seerr:
+  - apiVersion: v2
+    appVersion: sha-81da123
+    created: "2026-10-28T16:46:26.427475209Z"
+    description: A Helm chart for Seerr
+    digest: c0d011b5b1106a221588caececf2980c184c1934833682f8279b081f28acf268
+    home: https://github.com/seerr-team/seerr
+    icon: https://raw.githubusercontent.com/seerr-team/seerr/main/public/logo_full.svg
+    keywords:
+    - seerr
+    - media
+    - request
+    - discovery
+    - plex
+    - jellyfin
+    maintainers:
+    - name: 95gabor
+    name: seerr
+    sources:
+    - https://github.com/seerr-team/seerr
+    - https://github.com/95gabor/k8s-mediaserver-charts
+    type: application
+    urls:
+    - https://github.com/95gabor/k8s-mediaserver-charts/releases/download/seerr-0.1.91/seerr-0.1.91.tgz
+    version: 0.1.91
   - apiVersion: v2
     appVersion: sha-63f4663
     created: "2026-10-21T12:25:52.658314889Z"
@@ -13260,4 +13330,4 @@ entries:
     urls:
     - https://github.com/95gabor/k8s-mediaserver-charts/releases/download/transmission-0.1.1.tgz
     version: 0.1.1
-generated: "2026-10-21T14:38:02.484343059Z"
+generated: "2026-10-28T16:46:26.428311647Z"
