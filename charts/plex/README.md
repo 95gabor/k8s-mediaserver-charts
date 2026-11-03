@@ -1,6 +1,6 @@
 # plex
 
-![Version: 0.1.16](https://img.shields.io/badge/Version-0.1.16-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 1.43.5](https://img.shields.io/badge/AppVersion-1.43.5-informational?style=flat-square)
+![Version: 0.1.17](https://img.shields.io/badge/Version-0.1.17-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 1.43.5](https://img.shields.io/badge/AppVersion-1.43.5-informational?style=flat-square)
 
 A Helm chart for Plex Media Server
 
@@ -52,7 +52,7 @@ helm uninstall plex -n plex
 | general.ingress.ingressClassName | string | `""` |  |
 | general.ingress_host | string | `"k8s-mediaserver.k8s.test"` |  |
 | general.initContainer.image | string | `"docker.io/ubuntu"` |  |
-| general.initContainer.tag | string | `"26.04@sha256:19fcd1bf268f02b60aca3bd30bd8a6d9a11759a430e32921833e65f16d87348a"` |  |
+| general.initContainer.tag | string | `"26.04@sha256:6a06111c3b0a8600feadb270aec771dc239bf407b25625f93f44ab00e11f4d3c"` |  |
 | general.nodeSelector | object | `{}` |  |
 | general.pgid | int | `1001` |  |
 | general.plex_ingress_host | string | `"k8s-plex.k8s.test"` |  |
