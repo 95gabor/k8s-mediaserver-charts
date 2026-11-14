@@ -1,6 +1,6 @@
 # jellyfin
 
-![Version: 0.1.19](https://img.shields.io/badge/Version-0.1.19-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 10.11.11](https://img.shields.io/badge/AppVersion-10.11.11-informational?style=flat-square)
+![Version: 0.1.21](https://img.shields.io/badge/Version-0.1.21-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 10.11.11](https://img.shields.io/badge/AppVersion-10.11.11-informational?style=flat-square)
 
 A Helm chart for Jellyfin
 
@@ -48,7 +48,7 @@ helm uninstall jellyfin -n jellyfin
 | general.ingress.ingressClassName | string | `""` |  |
 | general.ingress_host | string | `"k8s-mediaserver.k8s.test"` |  |
 | general.initContainer.image | string | `"docker.io/ubuntu"` |  |
-| general.initContainer.tag | string | `"26.04@sha256:c098726dd9b9733f3e885f8de0ef375206a311b0a317eadc40d347b1115fb944"` |  |
+| general.initContainer.tag | string | `"26.04@sha256:6a06111c3b0a8600feadb270aec771dc239bf407b25625f93f44ab00e11f4d3c"` |  |
 | general.jellyfin_ingress_host | string | `"k8s-jelly.k8s.test"` |  |
 | general.nodeSelector | object | `{}` |  |
 | general.pgid | int | `1001` |  |
