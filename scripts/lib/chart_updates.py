@@ -94,47 +94,39 @@ def docker_hub_tag_exists(image: str, tag: str) -> bool:
     return response.status_code == 200
 
 
-def get_latest_container_tag(container_registry: str) -> str | None:
-    if not container_registry:
-        return None
+def container_registry_tag_exists(container_registry: str, tag: str) -> bool:
+    """Check that ``tag`` is published on a ghcr.io image (anonymous pull access)."""
+    if not container_registry.startswith("ghcr.io/"):
+        return False
 
-    parts = container_registry.replace("ghcr.io/", "").split("/")
-    if len(parts) != 2:
-        return None
-
-    org, package = parts
-    url = f"https://api.github.com/orgs/{org}/packages/container/{package}/versions"
-    headers = {"Accept": "application/vnd.github+json"}
-    token = os.environ.get("GITHUB_TOKEN")
-    if token:
-        headers["Authorization"] = f"Bearer {token}"
-
-    response = requests.get(url, headers=headers, timeout=30)
-    if response.status_code != 200:
+    repository = container_registry.removeprefix("ghcr.io/")
+    token_response = requests.get(
+        "https://ghcr.io/token",
+        params={"scope": f"repository:{repository}:pull"},
+        timeout=30,
+    )
+    if token_response.status_code != 200:
         print(
-            f"⚠️  Failed to fetch container tags: {response.status_code} - {response.text[:200]}"
+            f"⚠️  Failed to get ghcr.io token for {repository}: {token_response.status_code}"
         )
-        return None
+        return False
 
-    sha_tags = []
-    for version in response.json():
-        if "metadata" not in version or "container" not in version["metadata"]:
-            continue
-        tags = version["metadata"]["container"].get("tags", [])
-        for tag in tags:
-            if tag.startswith("sha-"):
-                sha_tags.append(
-                    {
-                        "tag": tag,
-                        "updated_at": version.get("updated_at", ""),
-                    }
-                )
-
-    if not sha_tags:
-        return None
-
-    sha_tags.sort(key=lambda item: item["updated_at"], reverse=True)
-    return sha_tags[0]["tag"]
+    response = requests.head(
+        f"https://ghcr.io/v2/{repository}/manifests/{tag}",
+        headers={
+            "Authorization": f"Bearer {token_response.json()['token']}",
+            "Accept": ", ".join(
+                [
+                    "application/vnd.oci.image.index.v1+json",
+                    "application/vnd.docker.distribution.manifest.list.v2+json",
+                    "application/vnd.oci.image.manifest.v1+json",
+                    "application/vnd.docker.distribution.manifest.v2+json",
+                ]
+            ),
+        },
+        timeout=30,
+    )
+    return response.status_code == 200
 
 
 def resolve_latest_version(chart_name: str, config: dict, release: dict) -> str | None:
@@ -142,7 +134,15 @@ def resolve_latest_version(chart_name: str, config: dict, release: dict) -> str 
     latest_tag = release["tag_name"].lstrip("v")
 
     if tag_format == "container_registry":
-        return get_latest_container_tag(config.get("container_registry"))
+        # Keep the release tag as-is (e.g. "v3.5.2"): the image tag has the "v" prefix.
+        tag = release["tag_name"]
+        container_registry = config.get("container_registry", "")
+        if container_registry_tag_exists(container_registry, tag):
+            return tag
+        print(
+            f"⚠️  {chart_name}: {container_registry}:{tag} is not published yet, skipping"
+        )
+        return None
 
     if tag_format == "version_base":
         return extract_base_version(latest_tag)

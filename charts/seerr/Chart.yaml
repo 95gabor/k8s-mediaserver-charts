@@ -2,8 +2,8 @@ apiVersion: v2
 name: seerr
 description: A Helm chart for Seerr
 type: application
-version: 0.1.94
-appVersion: sha-e59ffce
+version: 0.1.95
+appVersion: v3.5.2
 icon: https://raw.githubusercontent.com/seerr-team/seerr/main/public/logo_full.svg
 home: https://github.com/seerr-team/seerr
 sources:
