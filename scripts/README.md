@@ -10,7 +10,6 @@ Python helpers used by GitHub Actions workflows for chart version maintenance.
 
 Optional:
 
-- `GITHUB_TOKEN` — required for Seerr container registry lookups (`ghcr.io/seerr-team/seerr`)
 - `GITHUB_OUTPUT` — set automatically in GitHub Actions; not needed locally
 
 ## Setup
@@ -28,6 +27,7 @@ Chart update sources live in [`config/chart-updates.yaml`](config/chart-updates.
 - `repo` — GitHub repository used to detect new releases
 - `tag_format` — how the release tag is mapped to `appVersion`
 - `docker_image` — when set, the bump is skipped unless this Docker Hub tag exists
+- `container_registry` — with `tag_format: container_registry`, the release tag is used as-is (e.g. `v3.5.2`) and the bump is skipped unless that tag exists on this `ghcr.io` image
 
 ## App version updates (`check-updates` workflow)
 
