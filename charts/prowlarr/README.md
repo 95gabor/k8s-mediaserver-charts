@@ -1,6 +1,6 @@
 # prowlarr
 
-![Version: 0.1.20](https://img.shields.io/badge/Version-0.1.20-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 2.7.0](https://img.shields.io/badge/AppVersion-2.7.0-informational?style=flat-square)
+![Version: 0.1.21](https://img.shields.io/badge/Version-0.1.21-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 2.7.0](https://img.shields.io/badge/AppVersion-2.7.0-informational?style=flat-square)
 
 A Helm chart for Prowlarr
 
@@ -48,7 +48,7 @@ helm uninstall prowlarr -n prowlarr
 | general.ingress.ingressClassName | string | `""` |  |
 | general.ingress_host | string | `"k8s-mediaserver.k8s.test"` |  |
 | general.initContainer.image | string | `"docker.io/ubuntu"` |  |
-| general.initContainer.tag | string | `"26.04@sha256:6a06111c3b0a8600feadb270aec771dc239bf407b25625f93f44ab00e11f4d3c"` |  |
+| general.initContainer.tag | string | `"26.04@sha256:d66b366dac61b575bee2aef07e9c26e8070096fbe84a3d4d3eb0da069b5d76db"` |  |
 | general.nodeSelector | object | `{}` |  |
 | general.pgid | int | `1001` |  |
 | general.podDistribution | string | `"cluster"` |  |
