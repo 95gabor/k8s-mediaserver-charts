@@ -13,10 +13,10 @@ jobs:
     runs-on: ubuntu-24.04
     name: Run Helm linting
     steps:
-      - uses: actions/checkout@v7
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
 
       - name: Setup helm
-        uses: azure/setup-helm@v5
+        uses: azure/setup-helm@2f5e7bc67f1f9972ab16657bb795f36d8f04de0e # v5.1.0
         with:
           version: "v3.22.1"
         id: install-helm
@@ -44,10 +44,10 @@ jobs:
       jellyfin_ingress_host: k8s-jelly.k8s.test
     runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v7
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
 
       - name: Setup helm
-        uses: azure/setup-helm@v5
+        uses: azure/setup-helm@2f5e7bc67f1f9972ab16657bb795f36d8f04de0e # v5.1.0
         with:
           version: "v3.22.1"
 
@@ -61,7 +61,7 @@ jobs:
         run: helm dependency update charts/k8s-mediaserver
 
       - name: Kind Cluster
-        uses: helm/kind-action@v1
+        uses: helm/kind-action@ea822c7bf1874f08e5a491df991c228edffc3376 # v1.15.2
         with:
           cluster_name: kind
           config: test/kind/kind-config.yaml
