@@ -3,7 +3,7 @@ appVersion: 0.10.0
 description: A Helm chart for Kubernetes mediaserver (umbrella chart)
 name: k8s-mediaserver
 type: application
-version: 0.10.103
+version: 0.10.104
 icon: https://raw.githubusercontent.com/cncf/artwork/master/projects/kubernetes/icon/color/kubernetes-icon-color.svg
 home: https://github.com/95gabor/k8s-mediaserver-charts
 sources:
@@ -30,15 +30,15 @@ dependencies:
   repository: https://95gabor.github.io/k8s-mediaserver-charts
   condition: sonarr.enabled
 - name: radarr
-  version: 0.1.19
+  version: 0.1.20
   repository: https://95gabor.github.io/k8s-mediaserver-charts
   condition: radarr.enabled
 - name: jackett
-  version: 0.1.94
+  version: 0.1.95
   repository: https://95gabor.github.io/k8s-mediaserver-charts
   condition: jackett.enabled
 - name: prowlarr
-  version: 0.1.20
+  version: 0.1.21
   repository: https://95gabor.github.io/k8s-mediaserver-charts
   condition: prowlarr.enabled
 - name: transmission
