@@ -2,6 +2,29 @@ apiVersion: v1
 entries:
   jackett:
   - apiVersion: v2
+    appVersion: 0.24.3081
+    created: "2026-11-18T16:19:32.258245382Z"
+    description: A Helm chart for Jackett
+    digest: 8eea54c4b2c82a8d013a7cbf5a4c657214008ac0d8e00ad5ace0df94e43b8c00
+    home: https://github.com/Jackett/Jackett
+    icon: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/jackett-logo.png
+    keywords:
+    - jackett
+    - torrent
+    - tracker
+    - indexer
+    - media
+    maintainers:
+    - name: 95gabor
+    name: jackett
+    sources:
+    - https://github.com/Jackett/Jackett
+    - https://github.com/95gabor/k8s-mediaserver-charts
+    type: application
+    urls:
+    - https://github.com/95gabor/k8s-mediaserver-charts/releases/download/jackett-0.1.95/jackett-0.1.95.tgz
+    version: 0.1.95
+  - apiVersion: v2
     appVersion: 0.24.3065
     created: "2026-11-14T21:31:16.161738922Z"
     description: A Helm chart for Jackett
@@ -9445,6 +9468,29 @@ entries:
     version: 0.1.1
   prowlarr:
   - apiVersion: v2
+    appVersion: 3.0.2
+    created: "2026-11-18T16:19:32.397133266Z"
+    description: A Helm chart for Prowlarr
+    digest: 3d3cfd57fb6807dbd23ae5f9275298e26aec2c350b479c944e402d219c4480b8
+    home: https://github.com/Prowlarr/Prowlarr
+    icon: https://raw.githubusercontent.com/Prowlarr/Prowlarr/develop/Logo/256.png
+    keywords:
+    - prowlarr
+    - indexer
+    - tracker
+    - pvr
+    - media
+    maintainers:
+    - name: 95gabor
+    name: prowlarr
+    sources:
+    - https://github.com/Prowlarr/Prowlarr
+    - https://github.com/95gabor/k8s-mediaserver-charts
+    type: application
+    urls:
+    - https://github.com/95gabor/k8s-mediaserver-charts/releases/download/prowlarr-0.1.21/prowlarr-0.1.21.tgz
+    version: 0.1.21
+  - apiVersion: v2
     appVersion: 2.7.0
     created: "2026-11-14T21:31:16.58074846Z"
     description: A Helm chart for Prowlarr
@@ -9859,6 +9905,29 @@ entries:
     - https://github.com/95gabor/k8s-mediaserver-charts/releases/download/prowlarr-0.1.1.tgz
     version: 0.1.1
   radarr:
+  - apiVersion: v2
+    appVersion: 7.0.3
+    created: "2026-11-18T16:19:32.596103849Z"
+    description: A Helm chart for Radarr
+    digest: 7e0d329b5debdae4cc7f3ec889cadc0e5c136d8baf7dc85929aae3bb1d855e32
+    home: https://radarr.video/
+    icon: https://raw.githubusercontent.com/Radarr/Radarr/develop/Logo/256.png
+    keywords:
+    - radarr
+    - movies
+    - tracker
+    - media
+    - automation
+    maintainers:
+    - name: 95gabor
+    name: radarr
+    sources:
+    - https://github.com/Radarr/Radarr
+    - https://github.com/95gabor/k8s-mediaserver-charts
+    type: application
+    urls:
+    - https://github.com/95gabor/k8s-mediaserver-charts/releases/download/radarr-0.1.20/radarr-0.1.20.tgz
+    version: 0.1.20
   - apiVersion: v2
     appVersion: 6.4.4
     created: "2026-11-14T21:31:16.692067094Z"
@@ -13697,4 +13766,4 @@ entries:
     urls:
     - https://github.com/95gabor/k8s-mediaserver-charts/releases/download/transmission-0.1.1.tgz
     version: 0.1.1
-generated: "2026-11-14T21:40:06.946969703Z"
+generated: "2026-11-18T16:19:32.598141124Z"
