@@ -32,3 +32,26 @@ Selector labels
 app.kubernetes.io/name: {{ include "radarr.name" . }}
 app.kubernetes.io/instance: {{ .Release.Name }}
 {{- end }}
+
+{{/*
+Path of the downloads folder inside the container. With unifiedMount the whole volume is
+mounted once, so downloads and the library share a mount point and hardlinks work.
+*/}}
+{{- define "radarr.downloadsPath" -}}
+{{- if .Values.general.storage.unifiedMount.enabled -}}
+{{- printf "%s/%s" (.Values.general.storage.unifiedMount.path | trimSuffix "/") .Values.general.storage.subPaths.downloads -}}
+{{- else -}}
+/downloads
+{{- end -}}
+{{- end }}
+
+{{/*
+Path of the movies library inside the container (see downloadsPath).
+*/}}
+{{- define "radarr.libraryPath" -}}
+{{- if .Values.general.storage.unifiedMount.enabled -}}
+{{- printf "%s/%s" (.Values.general.storage.unifiedMount.path | trimSuffix "/") .Values.general.storage.subPaths.movies -}}
+{{- else -}}
+/movies
+{{- end -}}
+{{- end }}

@@ -20,6 +20,13 @@ general:
       movies: media/movies
       downloads: downloads
       config: config
+    # Mount the whole volume once (instead of separate subPath mounts for downloads
+    # and the library). Required for hardlinks / atomic moves between the download
+    # client folder and the library: link() fails across mount points (EXDEV).
+    # When enabled, use "<path>/<subPaths.*>" inside the app (e.g. /data/media/tv).
+    unifiedMount:
+      enabled: false
+      path: /data
     volumes: {}
   ingress:
     ingressClassName: ""

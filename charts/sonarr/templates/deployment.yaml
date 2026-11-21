@@ -47,7 +47,7 @@ spec:
           command:
             - sh
             - '-c'
-            - chown -R {{ .Values.general.puid }}:{{ .Values.general.pgid }} /config /downloads /tv && chown {{ .Values.general.puid }}:{{ .Values.general.pgid }} /run
+            - chown -R {{ .Values.general.puid }}:{{ .Values.general.pgid }} /config {{ include "sonarr.downloadsPath" . }} {{ include "sonarr.libraryPath" . }} && chown {{ .Values.general.puid }}:{{ .Values.general.pgid }} /run
           volumeMounts:
             - mountPath: /run
               name: run-tmp
@@ -59,12 +59,17 @@ spec:
               mountPath: "/config"
               subPath: "{{ .Values.general.storage.subPaths.config }}/sonarr"
             {{- end }}
+            {{- if .Values.general.storage.unifiedMount.enabled }}
+            - name: mediaserver-volume
+              mountPath: {{ .Values.general.storage.unifiedMount.path | quote }}
+            {{- else }}
             - name: mediaserver-volume
               mountPath: "/downloads"
               subPath: "{{ .Values.general.storage.subPaths.downloads }}"
             - name: mediaserver-volume
               mountPath: "/tv"
               subPath: "{{ .Values.general.storage.subPaths.tv }}"
+            {{- end }}
           securityContext:
             runAsGroup: 0
             runAsUser: 0
@@ -124,12 +129,17 @@ spec:
               mountPath: "/config"
               subPath: "{{ .Values.general.storage.subPaths.config }}/sonarr"
             {{- end }}
+            {{- if .Values.general.storage.unifiedMount.enabled }}
+            - name: mediaserver-volume
+              mountPath: {{ .Values.general.storage.unifiedMount.path | quote }}
+            {{- else }}
             - name: mediaserver-volume
               mountPath: "/downloads"
               subPath: "{{ .Values.general.storage.subPaths.downloads }}"
             - name: mediaserver-volume
               mountPath: "/tv"
               subPath: "{{ .Values.general.storage.subPaths.tv }}"
+            {{- end }}
           {{- with .Values.resources }}
           resources:
             {{- toYaml . | nindent 12 }}

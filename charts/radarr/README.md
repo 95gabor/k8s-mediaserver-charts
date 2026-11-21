@@ -1,6 +1,6 @@
 # radarr
 
-![Version: 0.1.20](https://img.shields.io/badge/Version-0.1.20-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 7.0.3](https://img.shields.io/badge/AppVersion-7.0.3-informational?style=flat-square)
+![Version: 0.1.21](https://img.shields.io/badge/Version-0.1.21-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 7.0.3](https://img.shields.io/badge/AppVersion-7.0.3-informational?style=flat-square)
 
 A Helm chart for Radarr
 
@@ -62,6 +62,8 @@ helm uninstall radarr -n radarr
 | general.storage.subPaths.downloads | string | `"downloads"` |  |
 | general.storage.subPaths.movies | string | `"media/movies"` |  |
 | general.storage.subPaths.tv | string | `"media/tv"` |  |
+| general.storage.unifiedMount.enabled | bool | `false` |  |
+| general.storage.unifiedMount.path | string | `"/data"` |  |
 | general.storage.volumes | object | `{}` |  |
 | general.tolerations | list | `[]` |  |
 | ingress.annotations | object | `{}` |  |
