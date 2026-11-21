@@ -9974,6 +9974,29 @@ entries:
   radarr:
   - apiVersion: v2
     appVersion: 7.0.3
+    created: "2026-11-21T17:38:59.05341986Z"
+    description: A Helm chart for Radarr
+    digest: abde61620d6df491a4157c9206029bd83a7c2ae0ebbbd4530b072e5fcf5948f5
+    home: https://radarr.video/
+    icon: https://raw.githubusercontent.com/Radarr/Radarr/develop/Logo/256.png
+    keywords:
+    - radarr
+    - movies
+    - tracker
+    - media
+    - automation
+    maintainers:
+    - name: 95gabor
+    name: radarr
+    sources:
+    - https://github.com/Radarr/Radarr
+    - https://github.com/95gabor/k8s-mediaserver-charts
+    type: application
+    urls:
+    - https://github.com/95gabor/k8s-mediaserver-charts/releases/download/radarr-0.1.21/radarr-0.1.21.tgz
+    version: 0.1.21
+  - apiVersion: v2
+    appVersion: 7.0.3
     created: "2026-11-18T16:19:32.596103849Z"
     description: A Helm chart for Radarr
     digest: 7e0d329b5debdae4cc7f3ec889cadc0e5c136d8baf7dc85929aae3bb1d855e32
@@ -13012,6 +13035,30 @@ entries:
   sonarr:
   - apiVersion: v2
     appVersion: 4.0.20
+    created: "2026-11-21T17:38:59.331947576Z"
+    description: A Helm chart for Sonarr
+    digest: fb8dd955976f4f3f8d9676b91781a88422781f901e795f08791b8f5afd7a0c6e
+    home: https://sonarr.tv/
+    icon: https://raw.githubusercontent.com/Sonarr/Sonarr/develop/Logo/256.png
+    keywords:
+    - sonarr
+    - tv
+    - series
+    - tracker
+    - media
+    - automation
+    maintainers:
+    - name: 95gabor
+    name: sonarr
+    sources:
+    - https://github.com/Sonarr/Sonarr
+    - https://github.com/95gabor/k8s-mediaserver-charts
+    type: application
+    urls:
+    - https://github.com/95gabor/k8s-mediaserver-charts/releases/download/sonarr-0.1.20/sonarr-0.1.20.tgz
+    version: 0.1.20
+  - apiVersion: v2
+    appVersion: 4.0.20
     created: "2026-11-14T21:31:17.193114843Z"
     description: A Helm chart for Sonarr
     digest: 679be93641244981ff06408f03bd1f25f2924cd002310d71b6b72b6e1afa6699
@@ -13833,4 +13880,4 @@ entries:
     urls:
     - https://github.com/95gabor/k8s-mediaserver-charts/releases/download/transmission-0.1.1.tgz
     version: 0.1.1
-generated: "2026-11-18T17:05:03.823756306Z"
+generated: "2026-11-21T17:38:59.332387843Z"
