@@ -169,6 +169,40 @@ Key configuration options:
 - `general.storage.pvcName` - Name of the persistentVolumeClaim (default: `mediaserver-pvc`)
 - `general.storage.size` - Size of the persistentVolume (default: `5Gi`)
 - `general.storage.subPaths.*` - Subpaths for different media types
+- `general.storage.unifiedMount.enabled` - (sonarr, radarr) Mount the whole volume once at `general.storage.unifiedMount.path` (default: `/data`) instead of separate `subPath` mounts, so hardlinks work (default: `false`)
+
+#### Hardlinks and seeding (unified mount)
+
+By default every folder (`/downloads`, `/tv`, `/movies`) is a separate `subPath` mount. A hardlink cannot
+cross mount points (`Cross-device link`), so Sonarr/Radarr have to copy (double disk usage) or move
+(you stop seeding) imported files. With `unifiedMount` the downloads folder and the library live under one
+mount (`/data/downloads`, `/data/media/tv`, `/data/media/movies`), so imports are hardlinks: no extra
+space, and the torrent keeps seeding.
+
+It is opt-in and changes nothing unless enabled. Enable it per service:
+
+```yaml
+sonarr:
+  general:
+    storage:
+      unifiedMount:
+        enabled: true
+radarr:
+  general:
+    storage:
+      unifiedMount:
+        enabled: true
+```
+
+Enabling it changes the paths Sonarr/Radarr see, so migrate once:
+
+1. Settings → Media Management → add the root folder `/data/media/tv` (Radarr: `/data/media/movies`) and enable *Use Hardlinks instead of Copy*.
+2. Move existing items to the new root folder with the Mass Editor (Series/Movies → Mass Editor → Root Folder). When asked, choose **not** to move files; only the path changes.
+3. Settings → Download Clients → Remote Path Mappings: Host = the download client host, Remote Path = `/downloads/` (what the download client sees), Local Path = `/data/downloads/`.
+4. Plex/Jellyfin and the download clients are unchanged (they keep their own mounts and see the same files).
+
+Note that the pod now sees the whole volume (including other apps' `config` folders). The permission fix
+init container still only runs `chown -R` on the config, downloads and library folders, as before.
 
 ### Service Configuration
 
