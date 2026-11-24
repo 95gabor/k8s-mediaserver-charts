@@ -2,7 +2,7 @@ apiVersion: v2
 name: radarr
 description: A Helm chart for Radarr
 type: application
-version: 0.1.21
+version: 0.1.22
 appVersion: 7.0.3
 icon: https://raw.githubusercontent.com/Radarr/Radarr/develop/Logo/256.png
 home: https://radarr.video/
