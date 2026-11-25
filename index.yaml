@@ -2,6 +2,29 @@ apiVersion: v1
 entries:
   jackett:
   - apiVersion: v2
+    appVersion: 0.25.34
+    created: "2026-11-25T16:56:05.081772355Z"
+    description: A Helm chart for Jackett
+    digest: 2603f63a0c4d60d52fe6cb6ee14f980982dbcf34d92ef0197b7157c02eec11b0
+    home: https://github.com/Jackett/Jackett
+    icon: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/jackett-logo.png
+    keywords:
+    - jackett
+    - torrent
+    - tracker
+    - indexer
+    - media
+    maintainers:
+    - name: 95gabor
+    name: jackett
+    sources:
+    - https://github.com/Jackett/Jackett
+    - https://github.com/95gabor/k8s-mediaserver-charts
+    type: application
+    urls:
+    - https://github.com/95gabor/k8s-mediaserver-charts/releases/download/jackett-0.1.96/jackett-0.1.96.tgz
+    version: 0.1.96
+  - apiVersion: v2
     appVersion: 0.24.3081
     created: "2026-11-18T16:19:32.258245382Z"
     description: A Helm chart for Jackett
@@ -9602,6 +9625,29 @@ entries:
     version: 0.1.1
   prowlarr:
   - apiVersion: v2
+    appVersion: 3.1.0
+    created: "2026-11-25T16:56:05.35578646Z"
+    description: A Helm chart for Prowlarr
+    digest: ccb77dc158cfc6788f244fce0268cc8423235bc26a9465547838520dc28ea34d
+    home: https://github.com/Prowlarr/Prowlarr
+    icon: https://raw.githubusercontent.com/Prowlarr/Prowlarr/develop/Logo/256.png
+    keywords:
+    - prowlarr
+    - indexer
+    - tracker
+    - pvr
+    - media
+    maintainers:
+    - name: 95gabor
+    name: prowlarr
+    sources:
+    - https://github.com/Prowlarr/Prowlarr
+    - https://github.com/95gabor/k8s-mediaserver-charts
+    type: application
+    urls:
+    - https://github.com/95gabor/k8s-mediaserver-charts/releases/download/prowlarr-0.1.22/prowlarr-0.1.22.tgz
+    version: 0.1.22
+  - apiVersion: v2
     appVersion: 3.0.2
     created: "2026-11-18T16:19:32.397133266Z"
     description: A Helm chart for Prowlarr
@@ -13947,4 +13993,4 @@ entries:
     urls:
     - https://github.com/95gabor/k8s-mediaserver-charts/releases/download/transmission-0.1.1.tgz
     version: 0.1.1
-generated: "2026-11-21T17:48:51.233110654Z"
+generated: "2026-11-25T16:56:05.356260645Z"
